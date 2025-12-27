@@ -143,3 +143,51 @@
   background: linear-gradient(to bottom, #fb7185, #f43f5e);
   border-radius: 10px;
 }
+
+
+/* 🌸 Soft glow blobs */
+.section-glow-pink {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(244,114,182,0.35), transparent 70%);
+  filter: blur(120px);
+}
+
+.section-glow-rose {
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(251,113,133,0.35), transparent 70%);
+  filter: blur(120px);
+}
+
+/* ✨ Floating flower animation */
+@keyframes floatUp {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 0.7;
+  }
+  100% {
+    transform: translateY(-120px) rotate(360deg);
+    opacity: 0;
+  }
+}
+
+.floating-element {
+  animation: floatUp 14s linear infinite;
+}
+
+/* 💎 Glass music card */
+.glass-card-strong {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(18px);
+  border-radius: 1.75rem;
+  box-shadow: 0 30px 80px rgba(244, 63, 94, 0.25);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+/* 🌙 Soft text shadow */
+.text-shadow-soft {
+  text-shadow: 0 8px 25px rgba(122, 31, 61, 0.25);
+}

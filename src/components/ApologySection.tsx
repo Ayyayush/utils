@@ -5,7 +5,7 @@ const STORY_TABS = [
     key: "mistake",
     label: "My Mistake",
     title: "My Mistake",
-    text: "I messed up, and I'm truly sorry for the pain I've caused you.",
+    text: "I messed up, and I'm truly sorry for the pain I've caused you. I really am..",
     img: "https://proxy.electricblaze.com/?u=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1613758812084-4e2be896fd04%3Fixid%3DM3w0Mzc5fDB8MXxzZWFyY2h8MTl8fGZsb3dlcnMlMkMlMjBoZWFydCUyQyUyMGxldHRlcnxlbnwwfDB8fHwxNzY1MzcyNTE3fDA%26ixlib%3Drb-4.1.0%26auto%3Dformat%26fit%3Dcrop%26w%3D1200%26q%3D50&e=1770336000&s=OYn_yfISj_cp5yw61Sj2DqnOMFnGsuH3McflI5cYPTc",
   },
   {
@@ -85,7 +85,7 @@ export default function ApologySection() {
           <div className="glass-card overflow-hidden order-2 md:order-1">
             <img
               src="https://images.unsplash.com/photo-1625480886337-3d5d5a395577"
-              className="w-full h-[300px] sm:h-[380px] md:h-[420px] object-cover"
+              className="w-full h-[600px] sm:h-[600px] md:h-[500px] object-cover"
               alt="apology"
             />
           </div>
@@ -96,22 +96,29 @@ export default function ApologySection() {
               From My Heart
             </p>
 
-            <h3 className="text-3xl sm:text-4xl font-playfair text-rose-900 mb-6">
-              My Sweetu…
-            </h3>
+         <h3 className="text-3xl sm:text-4xl font-playfair text-rose-900 mb-6">
+  My Sweetheart…
+</h3>
 
-            <p className="text-base sm:text-lg text-rose-800 mb-4 leading-relaxed">
-              Wo ladka jo uss din baarish mein akele khada tha,
-              aaj phir se thoda akela hai.
-            </p>
+<p className="text-base sm:text-lg text-rose-800 mb-4 leading-relaxed">
+  Wo ladka jo uss din baarish mein akele khada tha,  
+  aaj phir se thoda sa akela ho gaya hai.
+</p>
 
-            <p className="text-base sm:text-lg text-rose-800 mb-4 leading-relaxed">
-              Bas iss baar… wo chahta hai tum uska haath pakad lo.
-            </p>
+<p className="text-base sm:text-lg text-rose-800 mb-4 leading-relaxed">
+  Bas iss baar…  
+  wo chahta hai tum uska haath pakad lo,  
+  wo tumhe shikayat ka koi mauka nhi dega
+</p>
 
-            <p className="text-base sm:text-lg text-rose-700 leading-relaxed">
-              Maine galti ki hai. Par tumhari value kabhi kam nahi hui.
-            </p>
+<p className="text-base sm:text-lg text-rose-700 leading-relaxed">
+  Maine galti ki hai — aur main usse maanta hoon.  
+  Jo tum chahti thi mujhse,  
+  main wo sahi tareeke se nibha nahi paaya.  
+  Par aane wala har din…  
+  main tumhara sukoon, tumhari shanti ban’na chahta hoon.
+</p>
+
           </div>
         </div>
 
@@ -166,10 +173,12 @@ export default function ApologySection() {
           <h2 className="text-3xl sm:text-4xl font-playfair text-rose-900 mb-5 sm:mb-6 px-4">
             Sweetu…
           </h2>
-          <p className="text-base sm:text-lg md:text-xl text-rose-700 max-w-2xl mx-auto px-4 leading-relaxed italic font-cormorant">
-            I don't want perfection.<br className="sm:hidden" />
-            I just want us — honest, healing, and together.
-          </p>
+        <p className="text-base sm:text-lg md:text-xl text-rose-700 max-w-2xl mx-auto px-4 leading-relaxed italic font-cormorant">
+  I am not perfect, and I don’t expect perfection from you.<br />
+  I just want us — choosing each other,<br />
+  with honesty, patience, and love.<br />
+  Learning, healing, and growing… together.
+</p>
         </div>
 
       </div>

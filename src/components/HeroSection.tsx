@@ -66,7 +66,11 @@ export default function HeroSection() {
         <p className="text-base sm:text-lg md:text-xl text-rose-700 font-cormorant italic mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto px-4">
           I know I messed up.<br className="sm:hidden" />
           This isn't an excuse…<br className="sm:hidden" />
-          just something from my heart.
+          just something from my heart. <br className="sm:hidden" />
+          Any word here  is not for the sake of having it...It is my prommise to you<br className="sm:hidden" />
+          <br/>
+          It is just an effort to make you smile
+
         </p>
 
         {/* Image Card */}
@@ -92,10 +96,11 @@ export default function HeroSection() {
         </div>
 
         {/* Bottom Line */}
-        <p className="mt-10 sm:mt-12 text-rose-800 text-base sm:text-lg italic font-cormorant max-w-xl mx-auto px-4 leading-relaxed">
-          "Ye page sirf ek apology nahi hai…<br className="sm:hidden" />
-          ye meri feelings ka sabse honest version hai."
-        </p>
+       <p className="mt-10 sm:mt-12 text-rose-800 text-base sm:text-lg italic font-cormorant max-w-xl mx-auto px-4 leading-relaxed">
+  "I am not Perfect…  
+  I just want you to know that i will try to be a better person for you with each day moving forward "
+</p>
+
       </div>
 
       {/* Scroll hint */}

@@ -23,19 +23,21 @@ import img8 from "../assets/img8.jpeg";
 import img9 from "../assets/img9.jpeg";
 import img10 from "../assets/img10.jpeg";
 import img11 from "../assets/img11.jpeg";
+import img12 from "../assets/img12.jpeg";
 
 const meanings = [
-  { icon: Users, title: "My Home", image: img3 },
+  { icon: Users, title: "My Silly Side", image: img3 },
   { icon: Home, title: "Mere Bachpan ki Dost", image: img2 },
-  { icon: Sparkles, title: "My Partner", image: img5 },
-  { icon: Smile, title: "My Smile", image: img4 },
-  { icon: Heart, title: "My Heart", image: img1 },
-  { icon: Sun, title: "My Sunshine", image: img6 },
-  { icon: Music, title: "My Favorite Song", image: img7 },
-  { icon: Camera, title: "My Best Memories", image: img8 },
-  { icon: Coffee, title: "My Comfort", image: img9 },
-  { icon: Star, title: "Always Mine", image: img10 },
-  { icon: Sparkles, title: "My Personal Picasso", image: img11 },
+  { icon: Sparkles, title: "My Person", image: img5 },
+  { icon: Star, title: "My Serenity", image: img10 },
+  { icon: Heart, title: "All of my Heart", image: img1 },
+  { icon: Sun, title: "Side by Side", image: img6 },
+  { icon: Music, title: "Us,in Motion", image: img8 },
+  { icon: Camera, title: "Winter Sunshine", image: img7},
+  { icon: Coffee, title: "Wrapped in You", image: img9 },
+  { icon: Smile, title: "Home is you", image: img4 },
+ { icon: Sparkles, title: "Your Magic", image: img11 },
+  { icon: Sparkles, title: "All That Matters", image: img12 },
 ];
 
 export default function MeaningSection() {
@@ -180,15 +182,10 @@ export default function MeaningSection() {
           ))}
         </div>
 
-<<<<<<< HEAD
         {/* Footer quote */}
         <p className="mt-16 sm:mt-20 text-center font-cormorant text-2xl sm:text-3xl md:text-4xl text-rose-900 italic px-4 leading-relaxed max-w-3xl mx-auto">
-=======
-        {/* Quote */}
-        <p className="mt-20 sm:mt-24 text-center font-cormorant text-2xl sm:text-3xl md:text-4xl text-rose-900 italic px-4 leading-relaxed max-w-3xl mx-auto">
->>>>>>> 34ba29af0c8ef402f0b16834aa0c110a8c0721a3
           You are not just a part of my life…<br className="sm:hidden" />
-          you are my habit.
+          you are the reason of my life.
         </p>
       </div>
     </section>

@@ -4,6 +4,8 @@ import ourimg3 from "../assets/ourimg3.jpeg";
 import ourimg4 from "../assets/ourimg4.jpeg";
 import ourimg5 from "../assets/ourimg5.jpeg";
 import ourimg6 from "../assets/ourimg6.jpeg";
+import ourimg7 from "../assets/ourimg7.jpeg";
+import ourimg8 from "../assets/ourimg8.jpeg";
 
 const memories = [
   {
@@ -37,20 +39,20 @@ const memories = [
     size: "md:col-span-1",
   },
 
-  /* ====== ADDED 3 MORE (ONLY HERE) ====== */
+  /* ====== ADDED 3 MORE ====== */
   {
     caption: "The way you unknowingly healed me",
-    image: ourimg1,
+    image: ourimg7,
     size: "md:col-span-1",
   },
   {
     caption: "Moments that felt like forever",
-    image: ourimg3,
+    image: ourimg8,
     size: "md:col-span-1",
   },
   {
     caption: "You, without even trying",
-    image: ourimg6,
+    image: ourimg2,
     size: "md:col-span-1",
   },
 ];
@@ -100,7 +102,7 @@ export default function MemoryGallery() {
           </p>
         </div>
 
-        {/* GALLERY (single render) */}
+        {/* Gallery */}
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 auto-rows-[240px] sm:auto-rows-[260px] md:auto-rows-[280px]">
           {memories.map((memory, index) => (
             <div

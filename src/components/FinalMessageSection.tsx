@@ -51,13 +51,13 @@ export default function FinalMessageSection() {
           </p>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-playfair text-rose-900 mb-6 sm:mb-8 text-shadow-soft">
-            Sweetu…
+            Miss Akshita…
           </h1>
 
           <p className="text-lg sm:text-xl md:text-2xl text-rose-800 leading-relaxed mb-8 sm:mb-10 font-cormorant">
             Tumhare bina sab kuch thoda adhura lagta hai.<br />
             Main perfect nahi hoon…<br />
-            par jo feel karta hoon, wo bilkul real hai.
+            par whatever you saw and read here is true
           </p>
 
           {/* Buttons */}
@@ -78,14 +78,14 @@ export default function FinalMessageSection() {
 
           {/* Footer Quote */}
           <p className="text-xl sm:text-2xl text-rose-700 italic font-cormorant leading-relaxed">
-            "Tum ho toh sab kuch hai…<br className="sm:hidden" />
-            warna kuch bhi nahi."
+            "Tum ho toh gaata hai dil…<br className="sm:hidden" />
+            Tum nhi toh geet kahan "
           </p>
         </div>
 
         {/* Final Closing Line */}
         <p className="text-base sm:text-lg text-rose-600 italic font-cormorant">
-          This website isn't just an apology — it's my truth, my feelings, and my hope for us.
+          This isn't just an apology — it's my truth, my feelings, and my hope for us I just want you to smile if you liked it 🌻.
         </p>
 
       </div>

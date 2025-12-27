@@ -72,7 +72,7 @@ export default function MusicSectionOne() {
 
         <p className="text-base sm:text-lg text-rose-700 leading-relaxed max-w-2xl mx-auto mb-12 sm:mb-16 px-4">
           This song reminds me of you — of the silence, the emotions,
-          and everything I couldn't say out loud.
+          and everything I couldn't say out.
         </p>
 
         {/* Music Card */}
@@ -132,8 +132,25 @@ export default function MusicSectionOne() {
 
         <p className="mt-12 sm:mt-14 text-lg sm:text-xl text-rose-800 italic font-cormorant max-w-xl mx-auto px-4 leading-relaxed">
           "Meri phatakdi…<br className="sm:hidden" />
-          ye gaana udaasi nahi, tumhari gehraai yaad dilata hai."
+  This one’s Dedicated to you 
         </p>
+
+          {/* ❤️ POEM STANZA */}
+        <p className="mt-14 text-lg sm:text-xl text-rose-800 italic font-cormorant max-w-xl mx-auto px-4 leading-relaxed">
+          Meri …<br />
+          Meri Heer toh badi sad hai,<br />
+          thoda roothi, thoda chup si.<br />
+          Par iss gaane ke saath,<br />
+          main bas yahi chahta hoon —<br />
+          tum dheere dheere muskura do.
+        </p>
+
+{/* 🌷 PROMISE */}
+<p className="mt-8 text-base sm:text-lg text-rose-700 italic font-cormorant max-w-xl mx-auto px-4 leading-relaxed">
+  I’ll always try to turn those sad days  
+  into gentle, cheerful moments —  
+  filled with your smile.
+</p>
       </div>
     </section>
   );

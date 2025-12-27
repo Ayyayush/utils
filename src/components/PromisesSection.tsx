@@ -105,7 +105,7 @@ export default function PromisesSection() {
           <p className="text-2xl sm:text-3xl md:text-4xl font-cormorant italic text-rose-900 max-w-4xl mx-auto leading-relaxed px-4">
             I may stumble…<br className="sm:hidden" />
             but I promise I'll never stop trying —<br />
-            for you, for us.
+            for you, for us 💗.
           </p>
         </div>
 
