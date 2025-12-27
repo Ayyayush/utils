@@ -8,7 +8,7 @@ import aud2 from "../assets/aud2.mp3";
 export default function MusicSectionTwo() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
-  const audioRef = useRef(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   const togglePlay = () => {
     if (!audioRef.current) return;

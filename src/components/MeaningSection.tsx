@@ -180,8 +180,13 @@ export default function MeaningSection() {
           ))}
         </div>
 
+<<<<<<< HEAD
         {/* Footer quote */}
         <p className="mt-16 sm:mt-20 text-center font-cormorant text-2xl sm:text-3xl md:text-4xl text-rose-900 italic px-4 leading-relaxed max-w-3xl mx-auto">
+=======
+        {/* Quote */}
+        <p className="mt-20 sm:mt-24 text-center font-cormorant text-2xl sm:text-3xl md:text-4xl text-rose-900 italic px-4 leading-relaxed max-w-3xl mx-auto">
+>>>>>>> 34ba29af0c8ef402f0b16834aa0c110a8c0721a3
           You are not just a part of my life…<br className="sm:hidden" />
           you are my habit.
         </p>
