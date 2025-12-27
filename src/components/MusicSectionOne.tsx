@@ -1,160 +1,140 @@
 import { useRef, useState } from "react";
 import { Play, Pause } from "lucide-react";
 
+// ✅ import local audio from src/assets
+import aud1 from "../assets/aud1.mp3";
+
 export default function MusicSectionOne() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
-  const audioRef = useRef<HTMLAudioElement>(null);
+  const audioRef = useRef(null);
 
   const togglePlay = () => {
     if (!audioRef.current) return;
-    isPlaying ? audioRef.current.pause() : audioRef.current.play();
+
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+
     setIsPlaying(!isPlaying);
   };
 
   const handleTimeUpdate = () => {
     if (!audioRef.current) return;
-    setProgress(
-      (audioRef.current.currentTime / audioRef.current.duration) * 100
-    );
+
+    const duration = audioRef.current.duration || 0;
+    if (duration === 0) return;
+
+    setProgress((audioRef.current.currentTime / duration) * 100);
   };
 
   return (
-    <section className="relative py-32 px-6 overflow-hidden">
+    <section className="relative py-20 sm:py-28 md:py-32 px-6 overflow-hidden bg-gradient-to-b from-rose-50 via-pink-50/60 to-amber-50/40">
 
-      {/* 🌸 BACKGROUND IMAGE – USER PROVIDED */}
-      <div className="absolute inset-0">
-        <img
-          src="https://proxy.electricblaze.com/?u=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1692709761055-18278a5cbffb%3Fixid%3DM3w0Mzc5fDB8MXxzZWFyY2h8Mjd8fGZsb3dlcnMlMkMlMjBoZWFydCUyQyUyMGxldHRlcnxlbnwwfDB8fHwxNzY1MzcyNTE3fDA%26ixlib%3Drb-4.1.0%26auto%3Dformat%26fit%3Dcrop%26w%3D1200%26q%3D50"
-          className="w-full h-full object-cover"
-          alt="bg"
-        />
+      {/* Ambient Glows */}
+      <div className="section-glow-pink top-0 left-0" />
+      <div className="section-glow-rose bottom-0 right-0" />
 
-        {/* 🌸 SECOND BACKGROUND (chosen by me – soft depth) */}
-        <div className="absolute inset-0 bg-[url('https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=1600&q=80')] bg-cover bg-center opacity-25" />
-
-        {/* Soft romantic overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-rose-50/60 to-pink-100/75 backdrop-blur-[2px]" />
+      {/* Floating Flowers */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {Array.from({ length: 16 }).map((_, i) => {
+          const flowers = ["🌻", "🌼", "🌺", "🌸"];
+          const flower = flowers[i % flowers.length];
+          return (
+            <span
+              key={i}
+              className="absolute floating-element"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                fontSize: `${20 + Math.random() * 16}px`,
+                animationDelay: `${Math.random() * 8}s`,
+              }}
+            >
+              {flower}
+            </span>
+          );
+        })}
       </div>
 
-      {/* 🌻 FLOATING SUNFLOWERS */}
-      <div className="absolute inset-0 pointer-events-none">
-        {Array.from({ length: 14 }).map((_, i) => (
-          <span
-            key={i}
-            className="absolute animate-float text-yellow-300 opacity-70"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              fontSize: `${18 + Math.random() * 22}px`,
-              animationDelay: `${Math.random() * 6}s`,
-              animationDuration: `${20 + Math.random() * 12}s`,
-            }}
-          >
-            🌻
-          </span>
-        ))}
-      </div>
-
-      {/* 🌸 CONTENT */}
+      {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center">
 
-        {/* Text */}
-        <p className="text-sm tracking-widest text-rose-600 uppercase mb-2">
-          A Word From Me
+        <p className="text-xs sm:text-sm tracking-widest text-rose-600 uppercase mb-3">
+          Please read this slowly
         </p>
 
-        <h2 className="text-4xl md:text-5xl font-serif font-semibold text-[#7a1f3d] mb-6">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair font-semibold text-[#7a1f3d] mb-5 sm:mb-6 px-4 text-shadow-soft">
           I Messed Up… And I Know It
         </h2>
 
-        <p className="text-lg text-rose-700 leading-relaxed max-w-2xl mx-auto mb-16">
+        <p className="text-base sm:text-lg text-rose-700 leading-relaxed max-w-2xl mx-auto mb-12 sm:mb-16 px-4">
           This song reminds me of you — of the silence, the emotions,
-          and everything I couldn’t say out loud.
+          and everything I couldn't say out loud.
         </p>
 
-        {/* 🎵 MUSIC CARD (UNCHANGED) */}
-        <div className="relative mx-auto max-w-md bg-black/90 rounded-3xl shadow-2xl overflow-hidden">
+        {/* Music Card */}
+        <div className="glass-card-strong mx-auto max-w-md overflow-hidden">
 
           {/* Cover */}
           <div className="relative">
             <img
               src="https://i.imgur.com/2nCt3Sbl.jpg"
               alt="Song cover"
-              className="w-full h-72 object-cover"
+              className="w-full h-64 sm:h-72 object-cover"
             />
-            <div className="absolute inset-0 bg-black/30" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
           </div>
 
           {/* Player */}
-          <div className="p-6 text-white text-center">
-            <h3 className="text-xl font-semibold">
-              Heer Toh Badi Sad Hai
+          <div className="p-6 sm:p-8 bg-gradient-to-b from-rose-900 to-rose-950 text-white text-center">
+            <h3 className="text-xl sm:text-2xl font-semibold mb-1">
+              Sweetu Toh Badi Sad Haye ji
             </h3>
-            <p className="text-sm text-gray-300">
-              Tamasha • Mika Singh
+            <p className="text-sm text-rose-200">
+              Aajkal very mad haye ji
             </p>
 
             {/* Progress */}
-            <div className="mt-4 h-1 bg-white/20 rounded-full overflow-hidden">
+            <div className="mt-5 h-1.5 bg-white/20 rounded-full overflow-hidden">
               <div
-                className="h-full bg-pink-400 transition-all"
+                className="h-full bg-gradient-to-r from-pink-400 to-rose-400 transition-all duration-300"
                 style={{ width: `${progress}%` }}
               />
             </div>
 
             {/* Controls */}
-            <div className="mt-5 flex justify-center">
+            <div className="mt-6 flex justify-center">
               <button
                 onClick={togglePlay}
-                className="w-14 h-14 bg-pink-500 rounded-full flex items-center justify-center hover:scale-110 transition"
+                className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-500 rounded-full flex items-center justify-center hover:scale-110 hover:shadow-xl transition-all shadow-lg"
+                aria-label={isPlaying ? "Pause" : "Play"}
               >
                 {isPlaying ? (
-                  <Pause className="text-white" />
+                  <Pause className="text-white" size={24} />
                 ) : (
-                  <Play className="text-white ml-1" />
+                  <Play className="text-white ml-1" size={24} />
                 )}
               </button>
             </div>
           </div>
 
+          {/* ✅ Local audio */}
           <audio
             ref={audioRef}
+            src={aud1}
             onTimeUpdate={handleTimeUpdate}
             onEnded={() => setIsPlaying(false)}
-          >
-            <source src="/audio/song1.mp3" type="audio/mpeg" />
-          </audio>
+          />
         </div>
 
-        {/* Closing Line */}
-        <p className="mt-14 text-xl text-rose-800 italic font-cormorant">
-          “Meri phatakdi…  
-          ye gaana udaasi nahi, tumhari gehraai yaad dilata hai.”
+        <p className="mt-12 sm:mt-14 text-lg sm:text-xl text-rose-800 italic font-cormorant max-w-xl mx-auto px-4 leading-relaxed">
+          "Meri phatakdi…<br className="sm:hidden" />
+          ye gaana udaasi nahi, tumhari gehraai yaad dilata hai."
         </p>
       </div>
-
-      {/* 🌻 Floating animation */}
-      <style>{`
-        @keyframes float {
-          0% {
-            transform: translateY(0) rotate(0deg);
-            opacity: 0.4;
-          }
-          50% {
-            transform: translateY(-35px) rotate(8deg);
-            opacity: 0.8;
-          }
-          100% {
-            transform: translateY(0) rotate(0deg);
-            opacity: 0.4;
-          }
-        }
-        .animate-float {
-          animation: float linear infinite;
-        }
-      `}</style>
-
     </section>
   );
 }
