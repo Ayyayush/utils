@@ -1,52 +1,93 @@
-import { Mail } from "lucide-react";
+import { Mail, Heart } from "lucide-react";
 
 export default function FinalMessageSection() {
   return (
-    <section className="relative min-h-screen overflow-hidden">
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden bg-gradient-to-br from-rose-50 via-pink-50 to-amber-50">
 
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
           src="https://images.unsplash.com/photo-1707321580530-d4f7d303206c?auto=format&fit=crop&w=1600&q=80"
-          className="w-full h-full object-cover"
+          className="w-full h-full object-cover opacity-40"
           alt="love-bg"
         />
-        {/* soft overlay */}
-        <div className="absolute inset-0 bg-white/55" />
+        <div className="absolute inset-0 bg-gradient-to-b from-white/60 via-rose-50/70 to-pink-100/80" />
+      </div>
+
+      {/* Ambient Glows */}
+      <div className="section-glow-pink top-20 left-20" />
+      <div className="section-glow-rose bottom-20 right-20" />
+
+      {/* Floating Elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {Array.from({ length: 20 }).map((_, i) => {
+          const elements = ['💕', '💗', '🌸', '🌺', '✨'];
+          const element = elements[i % elements.length];
+          return (
+            <span
+              key={i}
+              className="absolute floating-element"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                fontSize: `${18 + Math.random() * 16}px`,
+                animationDelay: `${Math.random() * 8}s`,
+              }}
+            >
+              {element}
+            </span>
+          );
+        })}
       </div>
 
       {/* Content */}
-      <div className="relative z-10 max-w-6xl mx-auto px-6 py-32">
+      <div className="relative z-10 max-w-4xl mx-auto px-6 py-20 sm:py-32 text-center">
 
-        {/* Text Block */}
-        <div className="max-w-xl">
-          <h1 className="text-5xl md:text-6xl font-playfair text-rose-900 mb-6">
+        {/* Main Message Card */}
+        <div className="glass-card-strong p-8 sm:p-12 md:p-16 mb-8 sm:mb-10">
+
+          <p className="text-xs sm:text-sm uppercase tracking-widest text-rose-500 mb-4">
+            From My Heart To Yours
+          </p>
+
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-playfair text-rose-900 mb-6 sm:mb-8 text-shadow-soft">
             Sweetu…
           </h1>
 
-          <p className="text-lg md:text-xl text-rose-800 leading-relaxed mb-10">
-            Tumhare bina sab kuch thoda adhura lagta hai.  
-            Main perfect nahi hoon…  
+          <p className="text-lg sm:text-xl md:text-2xl text-rose-800 leading-relaxed mb-8 sm:mb-10 font-cormorant">
+            Tumhare bina sab kuch thoda adhura lagta hai.<br />
+            Main perfect nahi hoon…<br />
             par jo feel karta hoon, wo bilkul real hai.
           </p>
 
           {/* Buttons */}
-          <div className="flex flex-wrap gap-4">
-            <button className="px-7 py-3 rounded-full bg-white text-rose-700 font-semibold shadow-lg hover:scale-105 transition">
-              <Mail className="inline mr-2 w-4 h-4" />
+          <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center items-center mb-8">
+            <button className="w-full sm:w-auto px-8 py-3.5 rounded-full glass-card text-rose-700 font-semibold hover:scale-105 transition-all flex items-center justify-center gap-2">
+              <Mail className="w-5 h-5" />
               Talk To Me When You're Ready
             </button>
 
-            <button className="px-7 py-3 rounded-full bg-rose-500 text-white font-semibold shadow-lg hover:bg-rose-600 hover:scale-105 transition">
-              Always Yours ❤️
+            <button className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white font-semibold shadow-xl hover:scale-105 hover:shadow-2xl transition-all flex items-center justify-center gap-2">
+              <Heart className="w-5 h-5 fill-white" />
+              Always Yours
             </button>
           </div>
 
-          {/* Footer line */}
-          <p className="mt-10 text-rose-700 italic">
-            “Tum ho toh sab kuch hai… warna kuch bhi nahi.”
+          {/* Divider */}
+          <div className="w-20 h-[2px] bg-gradient-to-r from-rose-300 to-pink-300 rounded-full mx-auto mb-6" />
+
+          {/* Footer Quote */}
+          <p className="text-xl sm:text-2xl text-rose-700 italic font-cormorant leading-relaxed">
+            "Tum ho toh sab kuch hai…<br className="sm:hidden" />
+            warna kuch bhi nahi."
           </p>
         </div>
+
+        {/* Final Closing Line */}
+        <p className="text-base sm:text-lg text-rose-600 italic font-cormorant">
+          This website isn't just an apology — it's my truth, my feelings, and my hope for us.
+        </p>
+
       </div>
     </section>
   );

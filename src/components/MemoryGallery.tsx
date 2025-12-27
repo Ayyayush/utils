@@ -40,32 +40,57 @@ const memories = [
 
 export default function MemoryGallery() {
   return (
-    <section className="relative py-28 px-6 bg-gradient-to-b from-rose-50 via-pink-50 to-amber-50 overflow-hidden">
+    <section className="relative py-20 sm:py-24 md:py-28 px-6 bg-gradient-to-b from-amber-50/50 via-rose-50/60 to-pink-50/70 overflow-hidden">
 
-      {/* Soft ambient glow */}
-      <div className="absolute -top-32 -left-32 w-96 h-96 bg-rose-200/25 blur-3xl rounded-full" />
-      <div className="absolute bottom-0 right-0 w-96 h-96 bg-pink-200/25 blur-3xl rounded-full" />
+      {/* Ambient Glows */}
+      <div className="section-glow-rose top-0 left-0" />
+      <div className="section-glow-pink bottom-0 right-0" />
+
+      {/* Floating Elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {Array.from({ length: 10 }).map((_, i) => {
+          const elements = ['💕', '💗', '🌸'];
+          const element = elements[i % elements.length];
+          return (
+            <span
+              key={i}
+              className="absolute floating-element"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                fontSize: `${14 + Math.random() * 10}px`,
+                animationDelay: `${Math.random() * 8}s`,
+              }}
+            >
+              {element}
+            </span>
+          );
+        })}
+      </div>
 
       <div className="relative z-10 max-w-7xl mx-auto">
 
         {/* Heading */}
-        <h2 className="text-5xl md:text-6xl font-playfair text-[#4a1d2b] text-center mb-4">
-          Our Little Moments
-        </h2>
+        <div className="text-center mb-12 sm:mb-16">
+          <p className="text-xs sm:text-sm uppercase tracking-widest text-rose-500 mb-3">
+            Our Story
+          </p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair text-rose-900 mb-4 px-4 text-shadow-soft">
+            Our Little Moments
+          </h2>
 
-        <p className="font-cormorant text-2xl text-[#6b2f42] text-center mb-16 italic">
-          A collection of memories I never want to forget
-        </p>
+          <p className="font-cormorant text-xl sm:text-2xl text-rose-700 italic px-4">
+            A collection of memories I never want to forget
+          </p>
+        </div>
 
         {/* Gallery */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-5 auto-rows-[260px] md:auto-rows-[280px]">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5 auto-rows-[240px] sm:auto-rows-[260px] md:auto-rows-[280px]">
           {memories.map((memory, index) => (
             <div
               key={index}
-              className={`group relative overflow-hidden rounded-3xl ${memory.size}
-                bg-white/70 backdrop-blur-md
-                shadow-lg hover:shadow-2xl
-                transition-all duration-500 hover:-translate-y-2`}
+              className={`group relative overflow-hidden rounded-2xl sm:rounded-3xl ${memory.size}
+                glass-card`}
             >
               {/* Image */}
               <img
@@ -74,12 +99,12 @@ export default function MemoryGallery() {
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
               />
 
-              {/* Dark gradient overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+              {/* Gradient overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-40 group-hover:opacity-100 transition-opacity duration-500" />
 
               {/* Caption */}
-              <div className="absolute bottom-0 left-0 right-0 p-6 translate-y-8 group-hover:translate-y-0 transition-transform duration-500">
-                <p className="font-cormorant text-white text-2xl drop-shadow-lg">
+              <div className="absolute bottom-0 left-0 right-0 p-5 sm:p-6 translate-y-6 group-hover:translate-y-0 transition-transform duration-500">
+                <p className="font-cormorant text-white text-xl sm:text-2xl drop-shadow-2xl">
                   {memory.caption}
                 </p>
               </div>

@@ -4,7 +4,7 @@ import { Play, Pause } from "lucide-react";
 export default function MusicSectionTwo() {
   const [isPlaying, setIsPlaying] = useState(false);
   const [progress, setProgress] = useState(0);
-  const audioRef = useRef(null);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
   const togglePlay = () => {
     if (!audioRef.current) return;
@@ -20,35 +20,67 @@ export default function MusicSectionTwo() {
   };
 
   return (
-    <section className="relative py-32 bg-gradient-to-b from-rose-50 to-amber-50 overflow-hidden">
+    <section className="relative py-20 sm:py-28 md:py-32 px-6 overflow-hidden bg-gradient-to-b from-amber-50/40 via-rose-50/60 to-pink-50/50">
 
-      {/* Glow */}
-      <div className="absolute -top-32 -left-32 w-[500px] h-[500px] bg-rose-300/30 blur-[160px]" />
-      <div className="absolute bottom-0 right-0 w-[500px] h-[500px] bg-pink-300/30 blur-[160px]" />
+      {/* Ambient Glows */}
+      <div className="section-glow-rose top-0 left-0" />
+      <div className="section-glow-pink bottom-0 right-0" />
 
-      <div className="max-w-5xl mx-auto px-6 relative z-10">
+      {/* Floating Elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {Array.from({ length: 10 }).map((_, i) => {
+          const elements = ['🎵', '🎶', '💕', '✨'];
+          const element = elements[i % elements.length];
+          return (
+            <span
+              key={i}
+              className="absolute floating-element"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                fontSize: `${16 + Math.random() * 12}px`,
+                animationDelay: `${Math.random() * 8}s`,
+              }}
+            >
+              {element}
+            </span>
+          );
+        })}
+      </div>
 
-        {/* 🎵 MUSIC CARD */}
-        <div className="bg-black/90 rounded-[2.5rem] shadow-2xl overflow-hidden">
+      <div className="max-w-5xl mx-auto relative z-10">
+
+        {/* Header */}
+        <div className="text-center mb-12 sm:mb-16">
+          <p className="text-xs sm:text-sm uppercase tracking-widest text-rose-500 mb-3">
+            Our Song
+          </p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair text-rose-900 mb-4 px-4 text-shadow-soft">
+            The One We Chose Together
+          </h2>
+        </div>
+
+        {/* Music Card */}
+        <div className="glass-card-strong overflow-hidden mx-auto max-w-lg">
 
           <div className="relative">
             <img
               src="/assets/music-cover.jpg"
-              className="w-full h-[340px] object-cover"
+              className="w-full h-72 sm:h-80 object-cover"
               alt="music"
             />
-            <div className="absolute inset-0 bg-black/40" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/20 to-transparent" />
           </div>
 
-          <div className="p-8 text-center text-white">
-            <h3 className="text-3xl font-semibold">O Rangrez</h3>
-            <p className="text-gray-300 mt-1">
+          <div className="p-6 sm:p-8 text-center bg-gradient-to-b from-rose-900 to-rose-950 text-white">
+            <h3 className="text-2xl sm:text-3xl font-semibold mb-1">O Rangrez</h3>
+            <p className="text-sm sm:text-base text-rose-200">
               Bhaag Milkha Bhaag • Arijit Singh
             </p>
 
-            <div className="mt-4 h-1 bg-white/20 rounded-full">
+            <div className="mt-5 h-1.5 bg-white/20 rounded-full overflow-hidden">
               <div
-                className="h-full bg-pink-400 transition-all"
+                className="h-full bg-gradient-to-r from-pink-400 to-rose-400 transition-all duration-300"
                 style={{ width: `${progress}%` }}
               />
             </div>
@@ -56,15 +88,20 @@ export default function MusicSectionTwo() {
             <div className="mt-6 flex justify-center">
               <button
                 onClick={togglePlay}
-                className="w-14 h-14 bg-pink-500 rounded-full flex items-center justify-center hover:scale-110 transition"
+                className="w-16 h-16 bg-gradient-to-br from-pink-500 to-rose-500 rounded-full flex items-center justify-center hover:scale-110 hover:shadow-xl transition-all shadow-lg"
+                aria-label={isPlaying ? "Pause" : "Play"}
               >
-                {isPlaying ? <Pause /> : <Play className="ml-1" />}
+                {isPlaying ? (
+                  <Pause className="text-white" size={24} />
+                ) : (
+                  <Play className="text-white ml-1" size={24} />
+                )}
               </button>
             </div>
 
-            <p className="mt-6 text-lg italic text-rose-200">
-              “Humne decide kiya tha na…  
-              iss gaane pe saath dance karenge.”
+            <p className="mt-6 text-base sm:text-lg italic text-rose-200 leading-relaxed">
+              "Humne decide kiya tha na…<br className="sm:hidden" />
+              iss gaane pe saath dance karenge."
             </p>
           </div>
 
@@ -77,40 +114,14 @@ export default function MusicSectionTwo() {
           </audio>
         </div>
 
-        {/* 🌸 CONTINUOUS SCROLLING MEMORY STRIP */}
-        <div className="mt-24 overflow-hidden relative">
-          <div className="flex gap-8 animate-marquee">
-
-            {[
-              "https://images.unsplash.com/photo-1623406794883-d61f113b621a?auto=format&fit=crop&w=1200&q=80",
-              "https://images.unsplash.com/photo-1628583338616-f02a9faec6b4?auto=format&fit=crop&w=1200&q=80",
-              "https://images.unsplash.com/photo-1555530809-5a4680c18bdd?auto=format&fit=crop&w=1200&q=80",
-              "https://images.unsplash.com/photo-1653201170732-be851e4e3406?auto=format&fit=crop&w=1200&q=80",
-              "https://images.unsplash.com/photo-1623406794883-d61f113b621a?auto=format&fit=crop&w=1200&q=80",
-              "https://images.unsplash.com/photo-1628583338616-f02a9faec6b4?auto=format&fit=crop&w=1200&q=80",
-            ].map((img, i) => (
-              <div
-                key={i}
-                className="min-w-[360px] h-[240px] rounded-3xl overflow-hidden shadow-xl"
-              >
-                <img
-                  src={img}
-                  className="w-full h-full object-cover"
-                  alt="memory"
-                />
-              </div>
-            ))}
-          </div>
-        </div>
-
-        {/* 🌙 CINEMATIC END */}
-        <div className="mt-40 text-center">
-          <h2 className="text-4xl font-serif text-rose-900 mb-6">
+        {/* Closing Message */}
+        <div className="mt-20 sm:mt-28 md:mt-32 text-center">
+          <h2 className="text-3xl sm:text-4xl font-playfair text-rose-900 mb-5 sm:mb-6 px-4">
             Bas ek hi baat…
           </h2>
-          <p className="text-lg text-rose-700 max-w-2xl mx-auto leading-relaxed">
-            Main galat ho sakta hoon…  
-            par jo mehsoos karta hoon, wo kabhi jhooth nahi hota.  
+          <p className="text-lg sm:text-xl text-rose-700 max-w-2xl mx-auto leading-relaxed px-4 font-cormorant italic">
+            Main galat ho sakta hoon…<br className="sm:hidden" />
+            par jo mehsoos karta hoon, wo kabhi jhooth nahi hota.<br />
             Agar tum saath ho — toh sab theek ho sakta hai.
           </p>
         </div>

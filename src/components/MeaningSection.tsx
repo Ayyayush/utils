@@ -35,62 +35,70 @@ const meanings = [
 
 export default function MeaningSection() {
   return (
-    <section className="relative py-32 px-6 overflow-hidden">
+    <section className="relative py-20 sm:py-28 md:py-32 px-6 overflow-hidden bg-gradient-to-b from-pink-50/60 via-rose-50/40 to-amber-50/50">
 
-      {/* 🌸 BACKGROUND IMAGE (CLEARER) */}
-      <div className="absolute inset-0">
-        <img
-          src="https://proxy.electricblaze.com/?u=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1692709761055-18278a5cbffb%3Fixid%3DM3w0Mzc5fDB8MXxzZWFyY2h8Mjd8fGZsb3dlcnMlMkMlMjBoZWFydCUyQyUyMGxldHRlcnxlbnwwfDB8fHwxNzY1MzcyNTE3fDA%26ixlib%3Drb-4.1.0%26auto%3Dformat%26fit%3Dcrop%26w%3D1200%26q%3D50&e=1770336000&s=sa7dB8s1--4rWL0JxeTp8mZrF5FCa_pwSQDhqMSzlZo"
-          className="w-full h-full object-cover opacity-65"
-          alt="background"
-        />
-        {/* very light overlay */}
-        <div className="absolute inset-0 bg-white/25" />
+      {/* Ambient Glows */}
+      <div className="section-glow-pink top-10 right-10" />
+      <div className="section-glow-rose bottom-20 left-0" />
+
+      {/* Floating Elements */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {Array.from({ length: 14 }).map((_, i) => {
+          const elements = ['💕', '💗', '✨', '🌟', '💫'];
+          const element = elements[i % elements.length];
+          return (
+            <span
+              key={i}
+              className="absolute floating-element"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                fontSize: `${16 + Math.random() * 12}px`,
+                animationDelay: `${Math.random() * 8}s`,
+              }}
+            >
+              {element}
+            </span>
+          );
+        })}
       </div>
 
-      {/* CONTENT */}
+      {/* Content */}
       <div className="relative z-10 max-w-6xl mx-auto">
 
         {/* Heading */}
-        <h2 className="text-5xl md:text-6xl font-playfair text-[#3a1d28] text-center mb-20">
-          What You Mean To Me
-        </h2>
+        <div className="text-center mb-16 sm:mb-20">
+          <p className="text-xs sm:text-sm uppercase tracking-widest text-rose-500 mb-3">
+            You Are Everything
+          </p>
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair text-rose-900 px-4 text-shadow-soft">
+            What You Mean To Me
+          </h2>
+        </div>
 
         {/* Cards */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
           {meanings.map((item, i) => (
             <div
               key={i}
-              className="
-                group
-                relative
-                rounded-3xl
-                overflow-hidden
-                bg-white/25
-                backdrop-blur-xl
-                border border-white/40
-                shadow-[0_20px_60px_rgba(0,0,0,0.15)]
-                hover:shadow-[0_30px_80px_rgba(0,0,0,0.25)]
-                transition-all duration-500
-                hover:-translate-y-2
-              "
+              className="glass-card overflow-hidden group"
             >
               {/* Image */}
-              <div className="h-56 overflow-hidden">
+              <div className="h-48 sm:h-56 overflow-hidden">
                 <img
                   src={item.image}
                   alt={item.title}
-                  className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
               </div>
 
               {/* Content */}
-              <div className="p-6 flex items-center gap-4 bg-white/60 backdrop-blur-lg">
-                <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center shadow-lg">
-                  <item.icon className="w-6 h-6 text-white" />
+              <div className="p-5 sm:p-6 flex items-center gap-4 bg-white/70 backdrop-blur-lg">
+                <div className="w-11 h-11 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br from-pink-500 to-rose-500 flex items-center justify-center shadow-lg flex-shrink-0">
+                  <item.icon className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
                 </div>
 
-                <p className="text-xl font-serif text-[#3a1d28]">
+                <p className="text-lg sm:text-xl font-playfair text-rose-900">
                   {item.title}
                 </p>
               </div>
@@ -98,10 +106,9 @@ export default function MeaningSection() {
           ))}
         </div>
 
-
         {/* Quote */}
-        <p className="mt-24 text-center font-cormorant text-3xl md:text-4xl text-[#5c2a3a] italic">
-          You are not just a part of my life…  
+        <p className="mt-20 sm:mt-24 text-center font-cormorant text-2xl sm:text-3xl md:text-4xl text-rose-900 italic px-4 leading-relaxed max-w-3xl mx-auto">
+          You are not just a part of my life…<br className="sm:hidden" />
           you are my habit.
         </p>
       </div>
