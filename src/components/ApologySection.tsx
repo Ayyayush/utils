@@ -84,7 +84,7 @@ export default function ApologySection() {
           {/* Image */}
           <div className="glass-card overflow-hidden order-2 md:order-1">
             <img
-              src="https://images.unsplash.com/photo-1625480886337-3d5d5a395577"
+              src="https://proxy.electricblaze.com/?u=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1692709761055-18278a5cbffb%3Fixid%3DM3w0Mzc5fDB8MXxzZWFyY2h8Mjd8fGZsb3dlcnMlMkMlMjBoZWFydCUyQyUyMGxldHRlcnxlbnwwfDB8fHwxNzY1MzcyNTE3fDA%26ixlib%3Drb-4.1.0%26auto%3Dformat%26fit%3Dcrop%26w%3D1200%26q%3D50&e=1770336000&s=sa7dB8s1--4rWL0JxeTp8mZrF5FCa_pwSQDhqMSzlZo"
               className="w-full h-[600px] sm:h-[600px] md:h-[500px] object-cover"
               alt="apology"
             />
@@ -116,7 +116,7 @@ export default function ApologySection() {
   Jo tum chahti thi mujhse,  
   main wo sahi tareeke se nibha nahi paaya.  
   Par aane wala har din…  
-  main tumhara sukoon, tumhari shanti ban’na chahta hoon.
+  main wo banna chahta hoon jo tumne mujhse chaha hai
 </p>
 
           </div>

@@ -76,34 +76,59 @@ export default function ArtAndCraftSection() {
         </div>
 
         {/* ================= IMAGE + THOUGHT ROW ================= */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-20 sm:mt-24">
+        {/* ================= IMAGE + THOUGHT ROW ================= */}
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-20 sm:mt-24">
 
-          <img
-            src="https://images.unsplash.com/photo-1628583338497-0cca0af5bd3e?auto=format&fit=crop&w=1200&q=80"
-            className="rounded-3xl h-[240px] w-full object-cover glass-image"
-            alt="flowers"
-          />
+  {/* Image 1 */}
+  <div className="glass-card overflow-hidden rounded-3xl h-[240px]">
+    <img
+      src="https://images.unsplash.com/photo-1628583338497-0cca0af5bd3e?auto=format&fit=crop&w=1200&q=80"
+      alt="flowers"
+      className="w-full h-full object-cover"
+    />
+  </div>
 
-          <div className="glass-card rounded-3xl p-6 flex flex-col justify-center">
-            <h4 className="font-semibold text-rose-900 mb-2">Honesty</h4>
-            <p className="text-rose-700 text-sm">
-              I’ll be upfront about my mistakes.
-            </p>
-          </div>
+  {/* Thought 1 */}
+  <div className="glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-center">
+    <h4 className="text-xl font-playfair text-rose-900 mb-3">
+      Honesty
+    </h4>
+    <p className="text-base font-cormorant text-rose-700 leading-relaxed">
+      I’ll be upfront about my mistakes.
+    </p>
+    <div className="mt-4 h-[2px] w-12 bg-gradient-to-r from-rose-300 to-pink-300 rounded-full" />
+  </div>
 
-          <img
-            src="https://images.unsplash.com/photo-1651745889672-576f6ac829db?auto=format&fit=crop&w=1200&q=80"
-            className="rounded-3xl h-[240px] w-full object-cover glass-image"
-            alt="flowers"
-          />
+  {/* Image 2 */}
+  <div className="glass-card overflow-hidden rounded-3xl h-[240px]">
+    <img
+      src="https://images.unsplash.com/photo-1651745889672-576f6ac829db?auto=format&fit=crop&w=1200&q=80"
+      alt="flowers"
+      className="w-full h-full object-cover"
+    />
+  </div>
 
-          <div className="glass-card rounded-3xl p-6 flex flex-col justify-center">
-            <h4 className="font-semibold text-rose-900 mb-2">Empathy</h4>
-            <p className="text-rose-700 text-sm">
-              I’ll try to understand your perspective.
-            </p>
-          </div>
-        </div>
+  {/* Thought 2 */}
+  <div className="glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-center">
+    <h4 className="text-xl font-playfair text-rose-900 mb-3">
+      Empathy
+    </h4>
+    <p className="text-base font-cormorant text-rose-700 leading-relaxed">
+      I’ll try to understand your perspective.
+    </p>
+    <div className="mt-4 h-[2px] w-12 bg-gradient-to-r from-rose-300 to-pink-300 rounded-full" />
+  </div>
+
+  {/* Image 3 */}
+  <div className="glass-card overflow-hidden rounded-3xl h-[240px]">
+    <img
+      src="https://images.unsplash.com/photo-1580802948632-4651a169f351?auto=format&fit=crop&w=1200&q=80"
+      alt="flowers"
+      className="w-full h-full object-cover"
+    />
+  </div>
+
+</div>
 
         {/* Closing Line */}
         <div className="text-center mt-20 sm:mt-24 md:mt-28">

@@ -70,35 +70,60 @@ export default function PromisesSection() {
           ))}
         </div>
 
-        {/* ================= FLOWER ROW ================= */}
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mt-20 sm:mt-24">
+  
+  {/* ================= FLOWER + THOUGHT ROW ================= */}
+<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-20 sm:mt-24">
 
-          <div className="glass-card rounded-3xl p-6 flex flex-col justify-center">
-            <h4 className="font-semibold text-rose-900 mb-2">Patience</h4>
-            <p className="text-rose-700 text-sm">
-              I’ll give you space if you need it.
-            </p>
-          </div>
+  {/* Image 1 */}
+  <div className="glass-card overflow-hidden rounded-3xl h-[240px]">
+    <img
+      src="https://images.unsplash.com/photo-1550327616-e75a6eb1ba33?auto=format&fit=crop&w=1200&q=80"
+      alt="flowers"
+      className="w-full h-full object-cover"
+    />
+  </div>
 
-          <img
-            src="https://images.unsplash.com/photo-1550327616-e75a6eb1ba33?auto=format&fit=crop&w=1200&q=80"
-            className="rounded-3xl h-[240px] w-full object-cover glass-image"
-            alt="flowers"
-          />
+  {/* Thought 1 */}
+  <div className="glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-center">
+    <h4 className="text-xl font-playfair text-rose-900 mb-3">
+      Patience
+    </h4>
+    <p className="text-base font-cormorant text-rose-700 leading-relaxed">
+      I’ll give you space if you need it.
+    </p>
+    <div className="mt-4 h-[2px] w-12 bg-gradient-to-r from-rose-300 to-pink-300 rounded-full" />
+  </div>
 
-          <div className="glass-card rounded-3xl p-6 flex flex-col justify-center">
-            <h4 className="font-semibold text-rose-900 mb-2">Effort</h4>
-            <p className="text-rose-700 text-sm">
-              I’ll work hard to earn back your trust.
-            </p>
-          </div>
+  {/* Image 2 */}
+  <div className="glass-card overflow-hidden rounded-3xl h-[240px]">
+    <img
+      src="https://proxy.electricblaze.com/?u=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1565649854837-09197216c4ee%3Fixid%3DM3w0Mzc5fDB8MXxzZWFyY2h8MTh8fHJvbWFudGljJTIwZmxvd2Vyc3xlbnwwfDB8fHwxNzYyNzU4NjA1fDA%26ixlib%3Drb-4.1.0%26auto%3Dformat%26fit%3Dcrop%26w%3D1200%26q%3D50&e=1770336000&s=uBkrixJZvOdFA3hO_zcdjM5iC3vBELI6VWj8n6aiThw"
+      alt="flowers"
+      className="w-full h-full object-cover"
+    />
+  </div>
 
-          <img
-            src="https://images.unsplash.com/photo-1553606826-83c2ada2d685?auto=format&fit=crop&w=1200&q=80"
-            className="rounded-3xl h-[240px] w-full object-cover glass-image"
-            alt="romantic flowers"
-          />
-        </div>
+  {/* Thought 2 */}
+  <div className="glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-center">
+    <h4 className="text-xl font-playfair text-rose-900 mb-3">
+      Effort
+    </h4>
+    <p className="text-base font-cormorant text-rose-700 leading-relaxed">
+      I’ll work hard to earn back your trust.
+    </p>
+    <div className="mt-4 h-[2px] w-12 bg-gradient-to-r from-rose-300 to-pink-300 rounded-full" />
+  </div>
+
+  {/* Image 3 */}
+  <div className="glass-card overflow-hidden rounded-3xl h-[240px]">
+    <img
+      src="https://images.unsplash.com/photo-1553606826-83c2ada2d685?auto=format&fit=crop&w=1200&q=80"
+      alt="romantic flowers"
+      className="w-full h-full object-cover"
+    />
+  </div>
+
+</div>
 
         {/* Closing Line */}
         <div className="text-center mt-20 sm:mt-24 md:mt-28">

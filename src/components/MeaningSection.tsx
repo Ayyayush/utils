@@ -26,31 +26,93 @@ import img11 from "../assets/img11.jpeg";
 import img12 from "../assets/img12.jpeg";
 
 const meanings = [
-  { icon: Users, title: "My Silly Side", image: img3 },
-  { icon: Home, title: "Mere Bachpan ki Dost", image: img2 },
-  { icon: Sparkles, title: "My Person", image: img5 },
-  { icon: Star, title: "My Serenity", image: img10 },
-  { icon: Heart, title: "All of my Heart", image: img1 },
-  { icon: Sun, title: "Side by Side", image: img6 },
-  { icon: Music, title: "Us,in Motion", image: img8 },
-  { icon: Camera, title: "Winter Sunshine", image: img7},
-  { icon: Coffee, title: "Wrapped in You", image: img9 },
-  { icon: Smile, title: "Home is you", image: img4 },
- { icon: Sparkles, title: "Your Magic", image: img11 },
-  { icon: Sparkles, title: "All That Matters", image: img12 },
+  {
+    icon: Smile,
+    title: "My Silly Side",
+    image: img3,
+    position: "center",
+  },
+  {
+    icon: Users,
+    title: "Mere Bachpan Ki Dost",
+    image: img2,
+    position: "center 25%",
+  },
+  {
+    icon: Heart,
+    title: "My Person",
+    image: img5,
+    position: "center",
+  },
+  {
+    icon: Star,
+    title: "My Serenity",
+    image: img10,
+    position: "center 65%",
+  },
+  {
+    icon: Heart,
+    title: "All of My Heart",
+    image: img1,
+    position: "center",
+  },
+  {
+    icon: Sun,
+    title: "Side by Side",
+    image: img6,
+    position: "center 50%",
+  },
+  {
+    icon: Music,
+    title: "Us, In Motion",
+    image: img8,
+    position: "center",
+  },
+  {
+    icon: Camera,
+    title: "Winter Sunshine",
+    image: img7,
+    position: "center 18%",
+  },
+  {
+    icon: Coffee,
+    title: "Wrapped in You",
+    image: img9,
+    position: "center",
+  },
+  {
+    icon: Home,
+    title: "Home Is You",
+    image: img4,
+    position: "center",
+  },
+  {
+    icon: Sparkles,
+    title: "Your Magic",
+    image: img11,
+    position: "center 60%",
+  },
+  {
+    icon: Sparkles,
+    title: "All That Matters",
+    image: img12,
+    position: "center 70%",
+  },
 ];
 
 export default function MeaningSection() {
   return (
-    <section className="relative py-20 sm:py-28 md:py-32 px-6 overflow-hidden bg-gradient-to-b from-pink-50/70 via-rose-50/50 to-amber-50/60">
-      {/* Ambient Glows */}
-      <div className="section-glow-pink top-10 right-10" />
-      <div className="section-glow-rose bottom-20 left-0" />
+    <section className="relative py-24 sm:py-32 px-6 overflow-hidden">
 
-      {/* Extra floating flowers */}
+      {/* Background */}
+      <div className="absolute inset-0 bg-gradient-to-b from-pink-50 via-rose-50/70 to-amber-50/60" />
+      <div className="absolute -top-32 -left-32 w-[420px] h-[420px] bg-pink-300/30 blur-[160px]" />
+      <div className="absolute bottom-0 right-0 w-[460px] h-[460px] bg-rose-300/30 blur-[180px]" />
+
+      {/* Floating elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {Array.from({ length: 28 }).map((_, i) => {
-          const flowers = ["🌸", "🌷", "💮", "💕", "💗"];
+        {Array.from({ length: 36 }).map((_, i) => {
+          const flowers = ["🌸","🌻","🌻","🌻", "💮", "🌼", "💕", "💗"];
           return (
             <span
               key={i}
@@ -58,9 +120,9 @@ export default function MeaningSection() {
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                fontSize: `${12 + Math.random() * 18}px`,
+                fontSize: `${12 + Math.random() * 22}px`,
                 animationDelay: `${Math.random() * 10}s`,
-                opacity: 0.85,
+                opacity: 0.9,
               }}
             >
               {flowers[i % flowers.length]}
@@ -69,123 +131,101 @@ export default function MeaningSection() {
         })}
       </div>
 
+
+      
+
+      {/* Floating Hearts and Flowers */}
+      <div className="absolute inset-0 pointer-events-none overflow-hidden">
+        {Array.from({ length: 24 }).map((_, i) => {
+          const elements = ['🌸', '🌺', '💕', '💗', '🌷',"🌻", "🌼"];
+          const element = elements[i % elements.length];
+          return (
+            <span
+              key={i}
+              className="absolute opacity-50 floating-element"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+                fontSize: `${16 + Math.random() * 20}px`,
+                animationDelay: `${Math.random() * 8}s`,
+                animationDuration: `${15 + Math.random() * 10}s`,
+              }}
+            >
+              {element}
+            </span>
+          );
+        })}
+      </div>
+
       <div className="relative z-10 max-w-6xl mx-auto">
+
         {/* Heading */}
-        <div className="text-center mb-14 sm:mb-18">
-          <p className="text-xs sm:text-sm uppercase tracking-widest text-rose-500 mb-3">
+        <div className="text-center mb-16">
+          <p className="text-xs uppercase tracking-widest text-rose-500 mb-3">
             You Are Everything
           </p>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair text-rose-900 px-4 text-shadow-soft">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair text-rose-900 text-shadow-soft">
             What You Mean To Me
           </h2>
         </div>
 
-        {/* Cards grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+        {/* Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-12">
           {meanings.map((item, i) => (
-            <div key={i} className="relative">
-              {/* Stacked paper layers behind the main card */}
-              <div
-                className="absolute -bottom-6 -right-6 w-full h-full rounded-[28px] pointer-events-none"
-                style={{
-                  background: "linear-gradient(180deg,#fff6f3,#ffecec)",
-                  transform: "rotate(2deg)",
-                  boxShadow: "0 20px 40px rgba(122,31,61,0.08)",
-                }}
-              />
-              <div
-                className="absolute -bottom-3 -right-3 w-full h-full rounded-[28px] pointer-events-none"
-                style={{
-                  background: "linear-gradient(180deg,#fffaf8,#fff0ec)",
-                  transform: "rotate(1deg)",
-                  boxShadow: "0 10px 26px rgba(122,31,61,0.06)",
-                }}
-              />
+            <div
+              key={i}
+              className="relative transition-transform duration-500 hover:-translate-y-1"
+            >
+              {/* Paper stack */}
+              <div className="absolute -bottom-8 -right-8 w-full h-full rounded-[28px] bg-[#fdf1ec]
+                rotate-[2.5deg] shadow-[0_30px_60px_rgba(122,31,61,0.20)]" />
+              <div className="absolute -bottom-4 -right-4 w-full h-full rounded-[28px] bg-[#fff4f0]
+                rotate-[1.2deg] shadow-[0_18px_36px_rgba(122,31,61,0.14)]" />
 
-              {/* Main paper card */}
-              <article
-                className="relative overflow-hidden rounded-[28px] bg-[#fffaf8] border border-rose-100
-                           shadow-[0_30px_60px_rgba(122,31,61,0.18)] transition-transform duration-500
-                           hover:-translate-y-1"
-                aria-label={item.title}
-              >
-                {/* top-left paperclip / pin */}
-                <div className="absolute top-4 left-4 z-20 pointer-events-none">
-                  {/* paperclip SVG styled to look metallic */}
-                  <svg
-                    width="36"
-                    height="36"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    className="drop-shadow-md"
-                    style={{ transform: "rotate(-15deg)" }}
-                  >
-                    <path
-                      d="M7.5 6.5L16 15c2 2 0 5-3 5s-5-3-3-5L15 9"
-                      stroke="#D69CA3"
-                      strokeWidth="1.6"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                    <path
-                      d="M6.5 7.5L15 16c1.5 1.5 0 3.8-2 3.8S11 17 9.5 15.5L7 13"
-                      stroke="#F7D9D6"
-                      strokeWidth="1.2"
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                    />
-                  </svg>
-                </div>
+              {/* Card */}
+              <article className="relative rounded-[28px] bg-[#fffaf8] border border-rose-100
+                shadow-[0_28px_70px_rgba(122,31,61,0.25)] overflow-hidden">
 
-                {/* image (nostalgic treatment) */}
-                <div className="relative h-[260px] sm:h-[300px] overflow-hidden rounded-t-[28px]">
+                {/* Image */}
+                <div className="relative h-[260px] sm:h-[300px] overflow-hidden">
                   <img
                     src={item.image}
                     alt={item.title}
-                    className="w-full h-full object-cover transition-transform duration-[1800ms] group-hover:scale-110
-                               sepia-[0.24] contrast-95 brightness-95"
-                    style={{ transformOrigin: "center" }}
+                    className="w-full h-full object-cover sepia-[0.22] contrast-95 brightness-95"
+                    style={{
+                      objectPosition: item.position || "center",
+                    }}
                   />
-
-                  {/* subtle vignette + soft gradient to bottom for label readability */}
-                  <div className="absolute inset-0 pointer-events-none" style={{background: "linear-gradient(to top, rgba(0,0,0,0.32), rgba(0,0,0,0.06) 40%, transparent 70%)"}} />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/25 via-black/10 to-transparent" />
                 </div>
 
-                {/* content area (keeps the paper feel but compact) */}
-                <div className="p-1">
-                  {/* MMT-style label on image area (keeps same feel) */}
-                  <div className="mt-[-56px]">
-                    <div
-                      className="inline-flex items-center gap-3 px-4 py-2 rounded-xl bg-white/90 border border-rose-200 shadow-sm"
-                      style={{ backdropFilter: "blur(6px)" }}
-                    >
-                      <div className="w-9 h-9 rounded-lg bg-rose-500 flex items-center justify-center">
-                        <item.icon className="w-5 h-5 text-white" />
-                      </div>
-                      <span className="font-playfair text-rose-900 text-lg">
-                        {item.title}
-                      </span>
-                    </div>
-                  </div>
+                {/* Label */}
+              <div className="absolute bottom-0 right-0 flex justify-center">
+  <div className="inline-flex items-center gap-2 px-4 py-1.5
+    rounded-full bg-white/70 backdrop-blur-md
+    border border-rose-200/60 shadow-sm">
 
-                  {/* short description placeholder (if you want text under image) */}
-                  <div className="mt-4 text-rose-700">
-                    {/* keep minimal to preserve MMT look — change if desired */}
-                    <p className="text-sm opacity-90">
-                      {/* optional subtitle — remove or supply real text if needed */}
-                    </p>
-                  </div>
-                </div>
+    <item.icon className="w-4 h-4 text-rose-500" />
+
+    <span className="font-playfair text-sm sm:text-base text-rose-900 tracking-wide">
+      {item.title}
+    </span>
+
+    {/* subtle romantic underline */}
+    <span className="absolute -bottom-[2px] left-1/2 -translate-x-1/2
+      h-[2px] w-10 bg-gradient-to-r from-rose-300 to-pink-300 rounded-full" />
+  </div>
+</div>
+
               </article>
             </div>
           ))}
         </div>
 
-        {/* Footer quote */}
-        <p className="mt-16 sm:mt-20 text-center font-cormorant text-2xl sm:text-3xl md:text-4xl text-rose-900 italic px-4 leading-relaxed max-w-3xl mx-auto">
-          You are not just a part of my life…<br className="sm:hidden" />
-          you are the reason of my life.
+        {/* Footer */}
+        <p className="mt-20 text-center font-cormorant text-2xl sm:text-3xl text-rose-900 italic leading-relaxed max-w-3xl mx-auto">
+          You are not just a part of my life…<br />
+          you are the warmth behind every smile I carry.
         </p>
       </div>
     </section>

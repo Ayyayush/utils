@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { Play, Pause } from "lucide-react";
-import img9 from "../assets/img9.jpeg";
+import img9 from "../assets/image.jpeg";
 
 // ✅ import local audio
 import aud2 from "../assets/aud2.mp3";

@@ -6,54 +6,62 @@ import ourimg5 from "../assets/ourimg5.jpeg";
 import ourimg6 from "../assets/ourimg6.jpeg";
 import ourimg7 from "../assets/ourimg7.jpeg";
 import ourimg8 from "../assets/ourimg8.jpeg";
+import ourimg9 from "../assets/ourimg9.jpeg";
+
+
+
 
 const memories = [
   {
-    caption: "My Winter's Sunshine",
+    caption: "You, glowing in your own world",
     image: ourimg4,
     size: "md:col-span-1",
   },
   {
-    caption: "Humari chhoti si duniya",
+    caption: "The kind of joy I fell for",
     image: ourimg1,
     size: "md:col-span-2 md:row-span-2",
   },
   {
-    caption: "Little moments, big feelings",
+    caption: "This smileeee",
     image: ourimg3,
     size: "md:col-span-1",
   },
   {
-    caption: "Cozy window light",
-    image: ourimg2,
-    size: "md:col-span-1",
-  },
-  {
-    caption: "Soft petals, softer moments",
-    image: ourimg5,
-    size: "md:col-span-1",
-  },
-  {
-    caption: "Forever in my heart",
+    caption: "You in your moment",
     image: ourimg6,
     size: "md:col-span-1",
+    position: "object-[50%_20%]",
   },
-
-  /* ====== ADDED 3 MORE ====== */
   {
-    caption: "The way you unknowingly healed me",
+    caption: "Soft days, softer memories",
+    image: ourimg5,
+    size: "md:col-span-1",
+    position: "object-[50%_60%]",
+  },
+  {
+    caption: "Comfort looks like this",
+    image: ourimg9,
+    size: "md:col-span-1",
+    position: "object-[50%_40%]",
+  },
+  {
+    caption: "Calm joy",
     image: ourimg7,
     size: "md:col-span-1",
+    position: "object-[50%_40%]",
   },
   {
-    caption: "Moments that felt like forever",
+    caption: "Quietly holding my heart",
     image: ourimg8,
     size: "md:col-span-1",
+    position: "object-[50%_30%]",
   },
   {
-    caption: "You, without even trying",
+    caption: "Us, without trying",
     image: ourimg2,
     size: "md:col-span-1",
+    position: "object-[50%_35%]",
   },
 ];
 
@@ -91,14 +99,15 @@ export default function MemoryGallery() {
         {/* Heading */}
         <div className="text-center mb-12 sm:mb-16">
           <p className="text-xs sm:text-sm uppercase tracking-widest text-rose-500 mb-3">
-            Our Story
+            For You, Sweetu
           </p>
+
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair text-rose-900 mb-4 px-4 text-shadow-soft">
-            Our Little Moments
+            Sweetu, This Is Us
           </h2>
 
           <p className="font-cormorant text-xl sm:text-2xl text-rose-700 italic px-4">
-            A collection of memories I never want to forget
+            Moments that remind me what truly matters — you
           </p>
         </div>
 
@@ -112,7 +121,9 @@ export default function MemoryGallery() {
               <img
                 src={memory.image}
                 alt={memory.caption}
-                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                className={`w-full h-full object-cover ${
+                  memory.position || "object-center"
+                } transition-transform duration-700 group-hover:scale-110`}
               />
 
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-transparent opacity-40 group-hover:opacity-100 transition-opacity duration-500" />

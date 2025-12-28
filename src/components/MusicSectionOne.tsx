@@ -37,27 +37,34 @@ export default function MusicSectionOne() {
       <div className="section-glow-pink top-0 left-0" />
       <div className="section-glow-rose bottom-0 right-0" />
 
-      {/* Floating Flowers */}
+
+
+
+
+      {/* Floating Hearts and Flowers */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {Array.from({ length: 16 }).map((_, i) => {
-          const flowers = ["🌻", "🌼", "🌺", "🌸"];
-          const flower = flowers[i % flowers.length];
+        {Array.from({ length: 24 }).map((_, i) => {
+          const elements = ['🌸', '🌺', '💕', '💗', '🌷',"🌻", "🌼"];
+          const element = elements[i % elements.length];
           return (
             <span
               key={i}
-              className="absolute floating-element"
+              className="absolute opacity-50 floating-element"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                fontSize: `${20 + Math.random() * 16}px`,
+                fontSize: `${16 + Math.random() * 20}px`,
                 animationDelay: `${Math.random() * 8}s`,
+                animationDuration: `${15 + Math.random() * 10}s`,
               }}
             >
-              {flower}
+              {element}
             </span>
           );
         })}
       </div>
+
+
 
       {/* Content */}
       <div className="relative z-10 max-w-4xl mx-auto text-center">
@@ -137,7 +144,7 @@ export default function MusicSectionOne() {
 
           {/* ❤️ POEM STANZA */}
         <p className="mt-14 text-lg sm:text-xl text-rose-800 italic font-cormorant max-w-xl mx-auto px-4 leading-relaxed">
-          Meri …<br />
+          ..…<br />
           Meri Heer toh badi sad hai,<br />
           thoda roothi, thoda chup si.<br />
           Par iss gaane ke saath,<br />
