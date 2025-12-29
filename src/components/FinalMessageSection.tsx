@@ -1,4 +1,4 @@
-import { Mail, Heart } from "lucide-react";
+import { Heart } from "lucide-react";
 
 export default function FinalMessageSection() {
   return (
@@ -21,7 +21,7 @@ export default function FinalMessageSection() {
       {/* Floating Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {Array.from({ length: 20 }).map((_, i) => {
-          const elements = ['💕', '💗', '🌸', '🌺', '✨'];
+          const elements = ["💕", "💗", "🌸", "🌺", "✨"];
           const element = elements[i % elements.length];
           return (
             <span
@@ -44,7 +44,7 @@ export default function FinalMessageSection() {
       <div className="relative z-10 max-w-4xl mx-auto px-6 py-20 sm:py-32 text-center">
 
         {/* Main Message Card */}
-        <div className="glass-card-strong p-8 sm:p-12 md:p-16 mb-8 sm:mb-10">
+        <div className="glass-card-strong p-8 sm:p-12 md:p-16 mb-10">
 
           <p className="text-xs sm:text-sm uppercase tracking-widest text-rose-500 mb-4">
             From My Heart To Yours
@@ -62,9 +62,8 @@ export default function FinalMessageSection() {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center items-center mb-8">
-            <button className="w-full sm:w-auto px-8 py-3.5 rounded-full glass-card text-rose-700 font-semibold hover:scale-105 transition-all flex items-center justify-center gap-2">
-              <Mail className="w-5 h-5" />
-              Talk To Me When You're Ready
+            <button className="w-full sm:w-auto px-8 py-3.5 rounded-full glass-card text-rose-700 font-semibold hover:scale-105 transition-all">
+              Take me Back when you're ready 🌻
             </button>
 
             <button className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white font-semibold shadow-xl hover:scale-105 hover:shadow-2xl transition-all flex items-center justify-center gap-2">
@@ -78,15 +77,34 @@ export default function FinalMessageSection() {
 
           {/* Footer Quote */}
           <p className="text-xl sm:text-2xl text-rose-700 italic font-cormorant leading-relaxed">
+               Tum ho toh roshni hai har raaste mein…<br />
             "Tum ho toh gaata hai dil…<br className="sm:hidden" />
-            Tum nhi toh geet kahan "
+            Tum nhi toh geet kahan"
+
+            
           </p>
         </div>
 
         {/* Final Closing Line */}
-        <p className="text-base sm:text-lg text-rose-600 italic font-cormorant">
-          This isn't just an apology — it's my truth, my feelings, and my hope for us I just want you to smile if you liked it 🌻.
+        <p className="text-base sm:text-lg text-rose-600 italic font-cormorant mb-12">
+          This isn't just an apology — it's my truth, my feelings, and my hope for us.
+          I just want you to smile if you liked it 🌻
         </p>
+
+      {/* 🌙 POEM STANZA (BOTTOM) */}
+<p
+  className="text-center font-cormorant italic leading-relaxed"
+  style={{
+    color: "#d49a2a",                          // 🌻 soft warm yellow
+    fontSize: "clamp(15px, 4vw, 21px)",        // mobile responsive
+    textShadow: "0 2px 8px rgba(212,154,42,0.45)",
+  }}
+>
+  Ek dinn aap yunn humko mil jayenge <br />
+  Phool hi Phool raahon mein khil jayenge 💗
+</p>
+
+      
 
       </div>
     </section>

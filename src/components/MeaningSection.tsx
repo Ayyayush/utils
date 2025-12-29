@@ -30,7 +30,7 @@ const meanings = [
     icon: Smile,
     title: "My Silly Side",
     image: img3,
-    position: "center",
+    position: "center 50%",
   },
   {
     icon: Users,
@@ -96,9 +96,58 @@ const meanings = [
     icon: Sparkles,
     title: "All That Matters",
     image: img12,
-    position: "center 70%",
+    position: "center 50%",
   },
 ];
+
+import { useEffect, useRef, useState } from "react";
+
+
+function AnimatedPoem({ lines }) {
+  const [activeLine, setActiveLine] = useState(-1);
+
+  useEffect(() => {
+    let timeout;
+
+    if (activeLine < lines.length - 1) {
+      timeout = setTimeout(() => {
+        setActiveLine((prev) => prev + 1);
+      }, 1700); // time between lines
+    } else {
+      // pause after last line, then restart
+      timeout = setTimeout(() => {
+        setActiveLine(-1);
+      }, 2600);
+    }
+
+    return () => clearTimeout(timeout);
+  }, [activeLine, lines.length]);
+
+  return (
+    <div className="text-center font-cormorant italic leading-relaxed">
+      {lines.map((line, index) => (
+        <p
+          key={index}
+          className={`transition-all duration-700 ease-out
+            ${
+              index <= activeLine
+                ? "opacity-100 translate-y-0"
+                : "opacity-0 translate-y-3"
+            }
+          `}
+          style={{
+            color: "#d49a2a", // 🌻 soft warm yellow (not harsh)
+            fontSize: "clamp(15px, 4vw, 21px)", // mobile friendly
+         textShadow: "0 2px 8px rgba(212,154,42,0.45)",
+          }}
+        >
+          {line}
+        </p>
+      ))}
+    </div>
+  );
+}
+
 
 export default function MeaningSection() {
   return (
@@ -227,6 +276,49 @@ export default function MeaningSection() {
           You are not just a part of my life…<br />
           you are the warmth behind every smile I carry.
         </p>
+
+
+
+
+{/* ❤️ POEM STANZA — MODERN SPOTLIGHT */}
+<div className="mt-24 flex justify-center px-4">
+  <div className="relative max-w-2xl w-full">
+
+    {/* Ambient glow */}
+    <div className="absolute -inset-6 bg-gradient-to-br from-amber-200/40 via-rose-200/30 to-pink-200/40 blur-3xl rounded-full" />
+
+    {/* Poem Card */}
+    <div
+      className="
+        relative
+        px-6 sm:px-10 py-10
+        rounded-[32px]
+        backdrop-blur-xl
+        shadow-[0_40px_100px_rgba(122,31,61,0.25)]
+      "
+      style={{
+        background:
+          "linear-gradient(135deg, rgba(255,248,235,0.75), rgba(255,235,220,0.65))",
+      }}
+    >
+
+      {/* Inner highlight */}
+      <div className="absolute inset-0 rounded-[32px] ring-1 ring-amber-200/40 pointer-events-none" />
+
+      <AnimatedPoem
+        lines={[
+          "Tujh Bin Suraj Mein Aag Nahi Re",
+          "Tujh Bin Koyal Mein Raag Nahi Re",
+          "Tujh Bin Jaage Bhi Jaag Nahi Re",
+          "Jism Ye Kya Hai Khokhli Shipi",
+          "Rooh da Moti Hai Tu",
+        ]}
+      />
+
+    </div>
+  </div>
+</div>
+
       </div>
     </section>
   );

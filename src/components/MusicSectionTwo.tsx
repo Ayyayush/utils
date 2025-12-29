@@ -127,17 +127,17 @@ export default function MusicSectionTwo() {
         </div>
 
         {/* Closing Message */}
-        <div className="mt-20 sm:mt-28 md:mt-32 text-center">
-          <h2 className="text-3xl sm:text-4xl font-playfair text-rose-900 mb-5 sm:mb-6 px-4">
-            Bas ek hi baat…
-          </h2>
-          <p className="text-lg sm:text-xl text-rose-700 max-w-2xl mx-auto leading-relaxed px-4 font-cormorant italic">
-            Main galat ho sakta hoon…<br className="sm:hidden" />
-            par jo mehsoos karta hoon, wo kabhi jhooth nahi hota.<br />
-            Agar tum saath ho — toh sab theek ho sakta hai.
-          </p>
-        </div>
-      </div>
+      <div className="mt-20 sm:mt-28 md:mt-32 text-center">
+  <h3 className="text-3xl sm:text-4xl font-playfair text-rose-700 mb-5 sm:mb-6 px-4">
+    Dil se…
+  </h3>
+  <p className="text-lg sm:text-xl text-rose-700 max-w-2xl mx-auto leading-relaxed px-4 font-cormorant italic">
+    Koi wada nahi, koi shikayat nahi —<br />
+    bas itna sa ehsaas hai,<br />
+    ki tum saath ho toh sab kuch aur khoobsurat lagta hai.
+  </p>
+</div>
+</div>
     </section>
   );
 }
