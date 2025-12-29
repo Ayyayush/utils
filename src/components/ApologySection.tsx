@@ -44,7 +44,7 @@ export default function ApologySection() {
       {/* Floating Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {Array.from({ length: 12 }).map((_, i) => {
-          const elements = ['💕', '🌸', '🌺', '💗'];
+          const elements = ['🌻','💕', '🌸', '🌺', '💗','🌻'];  
           const element = elements[i % elements.length];
           return (
             <span
@@ -169,7 +169,7 @@ export default function ApologySection() {
         </div>
 
         {/* Final Note */}
-        <div className="text-center pt-16 sm:pt-20 md:pt-24">
+        <div className="text-center pt-12 sm:pt-1 md:pt-20">
           <h2 className="text-3xl sm:text-4xl font-playfair text-rose-900 mb-5 sm:mb-6 px-4">
             Sweetu…
           </h2>

@@ -77,7 +77,7 @@ export default function FinalMessageSection() {
 
           {/* Footer Quote */}
           <p className="text-xl sm:text-2xl text-rose-700 italic font-cormorant leading-relaxed">
-               Tum ho toh roshni hai har raaste mein…<br />
+             
             "Tum ho toh gaata hai dil…<br className="sm:hidden" />
             Tum nhi toh geet kahan"
 
