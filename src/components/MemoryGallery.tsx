@@ -103,7 +103,7 @@ export default function MemoryGallery() {
           </p>
 
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair text-rose-900 mb-4 px-4 text-shadow-soft">
-            Sweetu, This Is Us
+            Sweetu, Simplyyy You 
           </h2>
 
           <p className="font-cormorant text-xl sm:text-2xl text-rose-700 italic px-4">
