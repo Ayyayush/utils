@@ -54,10 +54,11 @@ export default function FinalMessageSection() {
             Miss Akshita…
           </h1>
 
-          <p className="text-lg sm:text-xl md:text-2xl text-rose-800 leading-relaxed mb-8 sm:mb-10 font-cormorant">
-            Tumhare bina sab kuch thoda adhura lagta hai.<br />
-            Main perfect nahi hoon…<br />
-            par whatever you saw and read here is true
+        
+         <p className="text-lg sm:text-xl md:text-2xl text-rose-800 leading-relaxed mb-8 sm:mb-10 font-cormorant">
+       Tum saath ho toh zindagi thodi aur khoobsurat lagti hai.<br />
+Main khud mein poora nahi hoon…<br />
+par jo bhi yahan hai, wo sirf tumhare liye hai.
           </p>
 
           {/* Buttons */}

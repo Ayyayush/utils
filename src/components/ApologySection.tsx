@@ -81,15 +81,6 @@ export default function ApologySection() {
         {/* Main Apology Card */}
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center max-w-6xl mx-auto">
 
-          {/* Image */}
-          <div className="glass-card overflow-hidden order-2 md:order-1">
-            <img
-              src="https://proxy.electricblaze.com/?u=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1692709761055-18278a5cbffb%3Fixid%3DM3w0Mzc5fDB8MXxzZWFyY2h8Mjd8fGZsb3dlcnMlMkMlMjBoZWFydCUyQyUyMGxldHRlcnxlbnwwfDB8fHwxNzY1MzcyNTE3fDA%26ixlib%3Drb-4.1.0%26auto%3Dformat%26fit%3Dcrop%26w%3D1200%26q%3D50&e=1770336000&s=sa7dB8s1--4rWL0JxeTp8mZrF5FCa_pwSQDhqMSzlZo"
-              className="w-full h-[600px] sm:h-[600px] md:h-[500px] object-cover"
-              alt="apology"
-            />
-          </div>
-
           {/* Text */}
           <div className="glass-card-strong p-8 sm:p-10 order-1 md:order-2">
             <p className="text-xs uppercase tracking-widest text-rose-400 mb-3">
@@ -100,18 +91,18 @@ export default function ApologySection() {
   My Sweetheart…
 </h3>
 
-<p className="text-base sm:text-lg text-rose-800 mb-4 leading-relaxed">
+<p className="text-base sm:text-lg text-rose-750 mb-4 leading-relaxed">
   Wo ladka jo uss din baarish mein akele khada tha,  
   aaj phir se thoda sa akela ho gaya hai.
 </p>
 
-<p className="text-base sm:text-lg text-rose-800 mb-4 leading-relaxed">
+<p className="text-base sm:text-lg text-rose-750 mb-4 leading-relaxed">
   Bas iss baar…  
   wo chahta hai tum uska haath pakad lo,  
   wo tumhe shikayat ka koi mauka nhi dega
 </p>
 
-<p className="text-base sm:text-lg text-rose-700 leading-relaxed">
+<p className="text-base sm:text-lg text-rose-750 leading-relaxed">
   Maine galti ki hai — aur main usse maanta hoon.  
   Jo tum chahti thi mujhse,  
   main wo sahi tareeke se nibha nahi paaya.  
@@ -119,7 +110,20 @@ export default function ApologySection() {
   main wo banna chahta hoon jo tumne mujhse chaha hai
 </p>
 
+
+
           </div>
+
+             {/* Image */}
+          <div className="glass-card overflow-hidden order-2 md:order-1">
+            <img
+              src="https://proxy.electricblaze.com/?u=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1692709761055-18278a5cbffb%3Fixid%3DM3w0Mzc5fDB8MXxzZWFyY2h8Mjd8fGZsb3dlcnMlMkMlMjBoZWFydCUyQyUyMGxldHRlcnxlbnwwfDB8fHwxNzY1MzcyNTE3fDA%26ixlib%3Drb-4.1.0%26auto%3Dformat%26fit%3Dcrop%26w%3D1200%26q%3D50&e=1770336000&s=sa7dB8s1--4rWL0JxeTp8mZrF5FCa_pwSQDhqMSzlZo"
+              className="w-full h-[600px] sm:h-[600px] md:h-[500px] object-cover"
+              alt="apology"
+            />
+          </div>
+
+       
         </div>
 
         {/* Story Tabs Section */}

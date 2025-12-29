@@ -41,7 +41,7 @@ export default function MusicSectionTwo() {
       {/* Floating Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {Array.from({ length: 10 }).map((_, i) => {
-          const elements = ["🎵", "🎶", "💕", "✨"];
+          const elements = ['🌸',"🎵", "🎶", "💕", "✨", "🌼"];
           return (
             <span
               key={i}

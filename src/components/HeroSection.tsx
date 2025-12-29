@@ -53,8 +53,8 @@ export default function HeroSection() {
         }`}
       >
         {/* Top Line */}
-        <p className="text-xs sm:text-sm tracking-widest text-rose-600 italic mb-3 uppercase">
-          It was my bad…
+        <p className="text-xs sm:text-sm tracking-widest text-rose-600 italic mb-3 ">
+         I know I made mistakes…
         </p>
 
         {/* Main Heading */}
