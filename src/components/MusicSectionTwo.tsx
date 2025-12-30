@@ -96,6 +96,8 @@ export default function MusicSectionTwo() {
               />
             </div>
 
+            {/* <p className="py-2"><h4>Doobna hai bas tera banke</h4></p> */}
+
             {/* Controls */}
             <div className="mt-6 flex justify-center">
               <button

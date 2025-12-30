@@ -7,9 +7,35 @@ import {
   Sun,
   Music,
   Camera,
-  Coffee,
   Star,
+  Snowflake,
+  Infinity,
 } from "lucide-react";
+
+
+
+
+
+// const meanings = [
+//   { icon: Smile, title: "My Silly Side", image: img3, position: "center 50%" },
+//   { icon: UsersRound, title: "Mere Bachpan Ki Dost", image: img2, position: "center 25%" },
+//  {
+//   icon: Handshake,     // ✅ SAFE
+//   title: "My Person",
+//   image: img5,
+//   position: "center",
+// },
+
+//   { icon: SunDim, title: "My Serenity", image: img10, position: "center 65%" },
+//   { icon: Heart, title: "All of My Heart", image: img1, position: "center" },
+//   { icon: Infinity, title: "Side by Side", image: img6, position: "center 50%" },
+//   { icon: Music2, title: "Us, In Motion", image: img8, position: "center" },
+//   { icon: Snowflake, title: "Winter Sunshine", image: img7, position: "center 18%" },
+//   { icon: Coffee, title: "Wrapped in You", image: img9, position: "center 40%" },
+//   { icon: Home, title: "Home Is You", image: img4, position: "center" },
+//   { icon: Sparkles, title: "Your Magic", image: img11, position: "center 60%" },
+//   { icon: Star, title: "All That Matters", image: img12, position: "center 50%" },
+// ];
 
 // Images
 import img1 from "../assets/img1.jpeg";
@@ -45,7 +71,7 @@ const meanings = [
     position: "center",
   },
   {
-    icon: Star,
+    icon: Camera,
     title: "My Serenity",
     image: img10,
     position: "center 65%",
@@ -57,7 +83,7 @@ const meanings = [
     position: "center",
   },
   {
-    icon: Sun,
+    icon: Infinity,
     title: "Side by Side",
     image: img6,
     position: "center 50%",
@@ -69,16 +95,16 @@ const meanings = [
     position: "center",
   },
   {
-    icon: Camera,
+    icon: Sun,
     title: "Winter Sunshine",
     image: img7,
     position: "center 18%",
   },
   {
-    icon: Coffee,
+    icon: Star,
     title: "Wrapped in You",
     image: img9,
-    position: "center",
+    position: "center 40%",
   },
   {
     icon: Home,
@@ -87,7 +113,7 @@ const meanings = [
     position: "center",
   },
   {
-    icon: Sparkles,
+    icon: Snowflake,
     title: "Your Magic",
     image: img11,
     position: "center 60%",

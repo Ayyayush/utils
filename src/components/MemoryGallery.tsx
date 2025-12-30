@@ -49,7 +49,7 @@ const memories = [
     caption: "Calm joy",
     image: ourimg7,
     size: "md:col-span-1",
-    position: "object-[50%_40%]",
+    position: "object-[50%_30%]",
   },
   {
     caption: "Quietly holding my heart",
@@ -61,7 +61,7 @@ const memories = [
     caption: "Us, without trying",
     image: ourimg2,
     size: "md:col-span-1",
-    position: "object-[50%_35%]",
+    position: "object-[50%_30%]",
   },
 ];
 
