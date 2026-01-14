@@ -1,4 +1,8 @@
 import { useState } from "react";
+import apology from "../assets/apology.jpeg";
+import feelings from "../assets/feelings.jpeg";
+import mistakes from "../assets/mistakes.jpeg";
+import future from "../assets/future.jpeg";
 
 const STORY_TABS = [
   {
@@ -6,14 +10,16 @@ const STORY_TABS = [
     label: "My Mistake",
     title: "My Mistake",
     text: "I messed up, and I'm truly sorry for the pain I've caused you. I really am..",
-    img: "https://proxy.electricblaze.com/?u=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1613758812084-4e2be896fd04%3Fixid%3DM3w0Mzc5fDB8MXxzZWFyY2h8MTl8fGZsb3dlcnMlMkMlMjBoZWFydCUyQyUyMGxldHRlcnxlbnwwfDB8fHwxNzY1MzcyNTE3fDA%26ixlib%3Drb-4.1.0%26auto%3Dformat%26fit%3Dcrop%26w%3D1200%26q%3D50&e=1770336000&s=OYn_yfISj_cp5yw61Sj2DqnOMFnGsuH3McflI5cYPTc",
+    img: mistakes,
+    position: "center 20%",
   },
   {
     key: "feelings",
     label: "Your Feelings",
     title: "Your Feelings",
     text: "I understand that you're hurt, and your feelings are completely valid.",
-    img: "https://images.unsplash.com/photo-1525310072745-f49212b5ac6d?auto=format&fit=crop&w=1200&q=80",
+    img: feelings,
+    position: "center 40%",
   },
   {
     key: "promise",
@@ -21,13 +27,15 @@ const STORY_TABS = [
     title: "My Promise",
     text: "I promise to listen better, grow, and never take you for granted again.",
     img: "https://proxy.electricblaze.com/?u=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1660918262717-b08af8df4d82%3Fixid%3DM3w0Mzc5fDB8MXxzZWFyY2h8MjN8fGZsb3dlcnMlMkMlMjBoZWFydCUyQyUyMGxldHRlcnxlbnwwfDB8fHwxNzY1MzcyNTE3fDA%26ixlib%3Drb-4.1.0%26auto%3Dformat%26fit%3Dcrop%26w%3D1200%26q%3D50&e=1770336000&s=8HTNXqliF4lyvPhlSp9qOj3YeDrdyRnxkqSh3cX7iOE",
+    position: "center center",
   },
   {
     key: "future",
     label: "Our Future",
     title: "Our Future",
     text: "I hope we can heal, rebuild, and choose each other again — every day.",
-    img: "https://proxy.electricblaze.com/?u=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1536953784228-c8aeb3efb458%3Fixid%3DM3w0Mzc5fDB8MXxzZWFyY2h8MTV8fGZsb3dlcnMlMkMlMjBoZWFydCUyQyUyMGxldHRlcnxlbnwwfDB8fHwxNzY1MzcyNTE3fDA%26ixlib%3Drb-4.1.0%26auto%3Dformat%26fit%3Dcrop%26w%3D1200%26q%3D50&e=1770336000&s=gFU6xBrxyGjX92_QYP_Kj9p9fSS08fQSsQjQyhoF07o",
+    img: future,
+    position: "center 60%",
   },
 ];
 
@@ -44,7 +52,7 @@ export default function ApologySection() {
       {/* Floating Elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {Array.from({ length: 12 }).map((_, i) => {
-          const elements = ['🌻','💕', '🌸', '🌺', '💗','🌻'];  
+          const elements = ['🌻','💕', '🌸', '🌺', '💗','🌻'];
           const element = elements[i % elements.length];
           return (
             <span
@@ -81,6 +89,7 @@ export default function ApologySection() {
         {/* Main Apology Card */}
         <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center max-w-6xl mx-auto">
 
+       
           {/* Text */}
           <div className="glass-card-strong p-8 sm:p-10 order-1 md:order-2">
             <p className="text-xs uppercase tracking-widest text-rose-400 mb-3">
@@ -103,27 +112,26 @@ export default function ApologySection() {
 </p>
 
 <p className="text-base sm:text-lg text-rose-750 leading-relaxed">
-  Maine galti ki hai — aur main usse maanta hoon.  
+  Maine galti ki hai — aur main usse maanta hoon. <br/> 
   Jo tum chahti thi mujhse,  
-  main wo sahi tareeke se nibha nahi paaya.  
-  Par aane wala har din…  
+  main wo sahi tareeke se nibha nahi paaya........... 
+  Par aane wala har dinn 
   main wo banna chahta hoon jo tumne mujhse chaha hai
 </p>
 
 
-
           </div>
 
-             {/* Image */}
+          {/* Image */}
           <div className="glass-card overflow-hidden order-2 md:order-1">
             <img
-              src="https://proxy.electricblaze.com/?u=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1692709761055-18278a5cbffb%3Fixid%3DM3w0Mzc5fDB8MXxzZWFyY2h8Mjd8fGZsb3dlcnMlMkMlMjBoZWFydCUyQyUyMGxldHRlcnxlbnwwfDB8fHwxNzY1MzcyNTE3fDA%26ixlib%3Drb-4.1.0%26auto%3Dformat%26fit%3Dcrop%26w%3D1200%26q%3D50&e=1770336000&s=sa7dB8s1--4rWL0JxeTp8mZrF5FCa_pwSQDhqMSzlZo"
-              className="w-full h-[600px] sm:h-[600px] md:h-[500px] object-cover"
+              src={apology}
               alt="apology"
+              className="w-full h-[600px] sm:h-[600px] md:h-[500px] object-cover"
+              style={{ objectPosition: "center center" }}
             />
           </div>
 
-       
         </div>
 
         {/* Story Tabs Section */}
@@ -154,7 +162,6 @@ export default function ApologySection() {
               <h3 className="text-3xl sm:text-4xl font-playfair text-rose-900 mb-5 sm:mb-6">
                 {activeStory.title}
               </h3>
-
               <p className="text-lg sm:text-xl text-rose-700 leading-relaxed">
                 {activeStory.text}
               </p>
@@ -166,6 +173,7 @@ export default function ApologySection() {
                 src={activeStory.img}
                 alt={activeStory.title}
                 className="w-full h-[280px] sm:h-[360px] md:h-[420px] object-cover transition-all duration-500"
+                style={{ objectPosition: activeStory.position }}
               />
             </div>
 
@@ -177,12 +185,12 @@ export default function ApologySection() {
           <h2 className="text-3xl sm:text-4xl font-playfair text-rose-900 mb-5 sm:mb-6 px-4">
             Sweetu…
           </h2>
-        <p className="text-base sm:text-lg md:text-xl text-rose-700 max-w-2xl mx-auto px-4 leading-relaxed italic font-cormorant">
-  I am not perfect, and I don’t expect perfection from you.<br />
-  I just want us — choosing each other,<br />
-  with honesty, patience, and love.<br />
-  Learning, healing, and growing… together.
-</p>
+          <p className="text-base sm:text-lg md:text-xl text-rose-700 max-w-2xl mx-auto px-4 leading-relaxed italic font-cormorant">
+            I am not perfect, and I don’t expect perfection from you.<br />
+            I just want us — choosing each other,<br />
+            with honesty, patience, and love.<br />
+            Learning, healing, and growing… together.
+          </p>
         </div>
 
       </div>

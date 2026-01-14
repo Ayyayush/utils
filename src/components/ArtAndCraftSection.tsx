@@ -1,3 +1,7 @@
+import art1 from "../assets/art1.jpeg";
+import art2 from "../assets/art2.jpeg";
+import art3 from "../assets/art3.jpeg";
+
 const reflectionCards = [
   { title: "My Blunder", text: "I admit I hurt you. I should have been more careful with your heart." },
   { title: "Your Pain", text: "I see the pain I caused — and I truly regret it." },
@@ -17,20 +21,21 @@ export default function ArtAndCraftSection() {
       <div className="section-glow-pink top-10 left-10" />
       <div className="section-glow-rose bottom-10 right-10" />
 
-      {/* Floating Elements */}
+     {/* Floating Hearts and Flowers */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {Array.from({ length: 12 }).map((_, i) => {
-          const elements = ['💕', '🌸', '💗', '🌺'];
+        {Array.from({ length: 24 }).map((_, i) => {
+          const elements = ['🌸', '🌺', '💕', '💗', '🌷',"🌻", "🌼","🌻"];
           const element = elements[i % elements.length];
           return (
             <span
               key={i}
-              className="absolute floating-element"
+              className="absolute opacity-50 floating-element"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                fontSize: `${16 + Math.random() * 12}px`,
+                fontSize: `${16 + Math.random() * 20}px`,
                 animationDelay: `${Math.random() * 8}s`,
+                animationDuration: `${15 + Math.random() * 10}s`,
               }}
             >
               {element}
@@ -76,59 +81,58 @@ export default function ArtAndCraftSection() {
         </div>
 
         {/* ================= IMAGE + THOUGHT ROW ================= */}
-        {/* ================= IMAGE + THOUGHT ROW ================= */}
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-20 sm:mt-24">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-20 sm:mt-24">
 
-  {/* Image 1 */}
-  <div className="glass-card overflow-hidden rounded-3xl h-[240px]">
-    <img
-      src="https://images.unsplash.com/photo-1628583338497-0cca0af5bd3e?auto=format&fit=crop&w=1200&q=80"
-      alt="flowers"
-      className="w-full h-full object-cover"
-    />
-  </div>
+          {/* Image 1 */}
+          <div className="glass-card overflow-hidden rounded-3xl h-[240px]">
+            <img
+              src={art1}
+              alt="creative desk aesthetic"
+              className="w-full h-full object-cover"
+            />
+          </div>
 
-  {/* Thought 1 */}
-  <div className="glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-center">
-    <h4 className="text-xl font-playfair text-rose-900 mb-3">
-      Honesty
-    </h4>
-    <p className="text-base font-cormorant text-rose-700 leading-relaxed">
-      I’ll be upfront about my mistakes.
-    </p>
-    <div className="mt-4 h-[2px] w-12 bg-gradient-to-r from-rose-300 to-pink-300 rounded-full" />
-  </div>
+          {/* Thought 1 */}
+          <div className="glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-center">
+            <h4 className="text-xl font-playfair text-rose-900 mb-3">
+              Honesty
+            </h4>
+            <p className="text-base font-cormorant text-rose-700 leading-relaxed">
+              I’ll be upfront about my mistakes.
+            </p>
+            <div className="mt-4 h-[2px] w-12 bg-gradient-to-r from-rose-300 to-pink-300 rounded-full" />
+          </div>
 
-  {/* Image 2 */}
-  <div className="glass-card overflow-hidden rounded-3xl h-[240px]">
-    <img
-      src="https://images.unsplash.com/photo-1651745889672-576f6ac829db?auto=format&fit=crop&w=1200&q=80"
-      alt="flowers"
-      className="w-full h-full object-cover"
-    />
-  </div>
+          {/* Image 2 – ART STUDIO */}
+          <div className="glass-card overflow-hidden rounded-3xl h-[240px]">
+            <img
+              src={art2}
+              alt="art studio workspace"
+              className="w-full h-full object-cover"
+            />
+          </div>
 
-  {/* Thought 2 */}
-  <div className="glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-center">
-    <h4 className="text-xl font-playfair text-rose-900 mb-3">
-      Empathy
-    </h4>
-    <p className="text-base font-cormorant text-rose-700 leading-relaxed">
-      I’ll try to understand your perspective.
-    </p>
-    <div className="mt-4 h-[2px] w-12 bg-gradient-to-r from-rose-300 to-pink-300 rounded-full" />
-  </div>
+          {/* Thought 2 */}
+          <div className="glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-center">
+            <h4 className="text-xl font-playfair text-rose-900 mb-3">
+              Empathy
+            </h4>
+            <p className="text-base font-cormorant text-rose-700 leading-relaxed">
+              I’ll try to understand your world — not overwrite it.
+            </p>
+            <div className="mt-4 h-[2px] w-12 bg-gradient-to-r from-rose-300 to-pink-300 rounded-full" />
+          </div>
 
-  {/* Image 3 */}
-  <div className="glass-card overflow-hidden rounded-3xl h-[240px]">
-    <img
-      src="https://images.unsplash.com/photo-1580802948632-4651a169f351?auto=format&fit=crop&w=1200&q=80"
-      alt="flowers"
-      className="w-full h-full object-cover"
-    />
-  </div>
+          {/* Image 3 – COZY CREATIVE SPACE */}
+          <div className="glass-card overflow-hidden rounded-3xl h-[240px]">
+            <img
+              src={art3}
+              alt="cozy creative corner"
+              className="w-full h-full object-cover"
+            />
+          </div>
 
-</div>
+        </div>
 
         {/* Closing Line */}
         <div className="text-center mt-20 sm:mt-24 md:mt-28">

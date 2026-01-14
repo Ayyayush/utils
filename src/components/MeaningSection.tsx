@@ -16,27 +16,6 @@ import {
 
 
 
-// const meanings = [
-//   { icon: Smile, title: "My Silly Side", image: img3, position: "center 50%" },
-//   { icon: UsersRound, title: "Mere Bachpan Ki Dost", image: img2, position: "center 25%" },
-//  {
-//   icon: Handshake,     // ✅ SAFE
-//   title: "My Person",
-//   image: img5,
-//   position: "center",
-// },
-
-//   { icon: SunDim, title: "My Serenity", image: img10, position: "center 65%" },
-//   { icon: Heart, title: "All of My Heart", image: img1, position: "center" },
-//   { icon: Infinity, title: "Side by Side", image: img6, position: "center 50%" },
-//   { icon: Music2, title: "Us, In Motion", image: img8, position: "center" },
-//   { icon: Snowflake, title: "Winter Sunshine", image: img7, position: "center 18%" },
-//   { icon: Coffee, title: "Wrapped in You", image: img9, position: "center 40%" },
-//   { icon: Home, title: "Home Is You", image: img4, position: "center" },
-//   { icon: Sparkles, title: "Your Magic", image: img11, position: "center 60%" },
-//   { icon: Star, title: "All That Matters", image: img12, position: "center 50%" },
-// ];
-
 // Images
 import img1 from "../assets/img1.jpeg";
 import img2 from "../assets/img2.jpeg";
@@ -187,7 +166,7 @@ export default function MeaningSection() {
       {/* Floating elements */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {Array.from({ length: 36 }).map((_, i) => {
-          const flowers = ["🌸","🌻","🌻","🌻", "💮", "🌼", "💕", "💗"];
+          const flowers = ["🌸","🌻","🌻", "💮", "🌼", "💕", "💗"];
           return (
             <span
               key={i}

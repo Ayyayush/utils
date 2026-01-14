@@ -1,3 +1,7 @@
+import scn1 from "../assets/scn1.png";
+import scn2 from "../assets/scn2.png";
+import scn3 from "../assets/scn3.png";
+
 const promises = [
   "I'll listen — really listen, not just hear.",
   "Less anger, more patience, always more love.",
@@ -16,20 +20,21 @@ export default function PromisesSection() {
       <div className="section-glow-rose top-10 left-10" />
       <div className="section-glow-pink bottom-10 right-10" />
 
-      {/* Floating Elements */}
+      {/* Floating Hearts and Flowers */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {Array.from({ length: 14 }).map((_, i) => {
-          const elements = ['💕', '💗', '✨', '🌸'];
+        {Array.from({ length: 24 }).map((_, i) => {
+          const elements = ['🌸', '🌺', '💕', '💗', '🌷', '🌻', '🌼'];
           const element = elements[i % elements.length];
           return (
             <span
               key={i}
-              className="absolute floating-element"
+              className="absolute opacity-50 floating-element"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                fontSize: `${16 + Math.random() * 12}px`,
+                fontSize: `${16 + Math.random() * 20}px`,
                 animationDelay: `${Math.random() * 8}s`,
+                animationDuration: `${15 + Math.random() * 10}s`,
               }}
             >
               {element}
@@ -70,60 +75,62 @@ export default function PromisesSection() {
           ))}
         </div>
 
-  
-  {/* ================= FLOWER + THOUGHT ROW ================= */}
-<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-20 sm:mt-24">
+        {/* ================= FLOWER + THOUGHT ROW ================= */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6 mt-20 sm:mt-24">
 
-  {/* Image 1 */}
-  <div className="glass-card overflow-hidden rounded-3xl h-[240px]">
-    <img
-      src="https://images.unsplash.com/photo-1550327616-e75a6eb1ba33?auto=format&fit=crop&w=1200&q=80"
-      alt="flowers"
-      className="w-full h-full object-cover"
-    />
-  </div>
+          {/* Image 1 */}
+          <div className="glass-card overflow-hidden rounded-3xl h-[240px]">
+            <img
+              src={scn1}
+              alt="flowers"
+              className="w-full h-full object-cover"
+              style={{ objectPosition: "center center" }}
+            />
+          </div>
 
-  {/* Thought 1 */}
-  <div className="glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-center">
-    <h4 className="text-xl font-playfair text-rose-900 mb-3">
-      Patience
-    </h4>
-    <p className="text-base font-cormorant text-rose-700 leading-relaxed">
-      I’ll give you space if you need it.
-    </p>
-    <div className="mt-4 h-[2px] w-12 bg-gradient-to-r from-rose-300 to-pink-300 rounded-full" />
-  </div>
+          {/* Thought 1 */}
+          <div className="glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-center">
+            <h4 className="text-xl font-playfair text-rose-900 mb-3">
+              Patience
+            </h4>
+            <p className="text-base font-cormorant text-rose-700 leading-relaxed">
+              I’ll give you space if you need it.
+            </p>
+            <div className="mt-4 h-[2px] w-12 bg-gradient-to-r from-rose-300 to-pink-300 rounded-full" />
+          </div>
 
-  {/* Image 2 */}
-  <div className="glass-card overflow-hidden rounded-3xl h-[240px]">
-    <img
-      src="https://proxy.electricblaze.com/?u=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1565649854837-09197216c4ee%3Fixid%3DM3w0Mzc5fDB8MXxzZWFyY2h8MTh8fHJvbWFudGljJTIwZmxvd2Vyc3xlbnwwfDB8fHwxNzYyNzU4NjA1fDA%26ixlib%3Drb-4.1.0%26auto%3Dformat%26fit%3Dcrop%26w%3D1200%26q%3D50&e=1770336000&s=uBkrixJZvOdFA3hO_zcdjM5iC3vBELI6VWj8n6aiThw"
-      alt="flowers"
-      className="w-full h-full object-cover"
-    />
-  </div>
+          {/* Image 2 */}
+          <div className="glass-card overflow-hidden rounded-3xl h-[240px]">
+            <img
+              src={scn2}
+              alt="flowers"
+              className="w-full h-full object-cover"
+              style={{ objectPosition: "center 75%" }}
+            />
+          </div>
 
-  {/* Thought 2 */}
-  <div className="glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-center">
-    <h4 className="text-xl font-playfair text-rose-900 mb-3">
-      Effort
-    </h4>
-    <p className="text-base font-cormorant text-rose-700 leading-relaxed">
-      I’ll work hard to earn back your trust.
-    </p>
-    <div className="mt-4 h-[2px] w-12 bg-gradient-to-r from-rose-300 to-pink-300 rounded-full" />
-  </div>
+          {/* Thought 2 */}
+          <div className="glass-card rounded-3xl p-6 sm:p-8 flex flex-col justify-center">
+            <h4 className="text-xl font-playfair text-rose-900 mb-3">
+              Effort
+            </h4>
+            <p className="text-base font-cormorant text-rose-700 leading-relaxed">
+              I’ll work hard to earn back your trust.
+            </p>
+            <div className="mt-4 h-[2px] w-12 bg-gradient-to-r from-rose-300 to-pink-300 rounded-full" />
+          </div>
 
-  {/* Image 3 */}
-  <div className="glass-card overflow-hidden rounded-3xl h-[240px]">
-    <img
-      src="https://images.unsplash.com/photo-1553606826-83c2ada2d685?auto=format&fit=crop&w=1200&q=80"
-      alt="romantic flowers"
-      className="w-full h-full object-cover"
-    />
-  </div>
+          {/* Image 3 */}
+          <div className="glass-card overflow-hidden rounded-3xl h-[240px]">
+            <img
+              src={scn3}
+              alt="romantic flowers"
+              className="w-full h-full object-cover"
+              style={{ objectPosition: "center center" }}
+            />
+          </div>
 
-</div>
+        </div>
 
         {/* Closing Line */}
         <div className="text-center mt-20 sm:mt-24 md:mt-28">
