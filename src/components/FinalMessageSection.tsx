@@ -64,7 +64,7 @@ par jo bhi yahan hai, wo sirf tumhare liye hai.
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center items-center mb-8">
             <button className="w-full sm:w-auto px-8 py-3.5 rounded-full glass-card text-rose-700 font-semibold hover:scale-105 transition-all">
-              Take me Back when you're ready 🌻
+              Whenever you’re ready. Truly🌻
             </button>
 
             <button className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white font-semibold shadow-xl hover:scale-105 hover:shadow-2xl transition-all flex items-center justify-center gap-2">
@@ -85,11 +85,11 @@ par jo bhi yahan hai, wo sirf tumhare liye hai.
             
           </p>
         </div>
-
-        {/* Final Closing Line */}
+   {/* Final Closing Line */}
         <p className="text-base sm:text-lg text-rose-600 italic font-cormorant mb-12">
-          This isn't just an apology — it's my truth, my feelings, and my hope for us.
-          I just want you to smile if you liked it 🌻
+          This isn't just an apology.<br />
+          It's my truth, my heart, and my hope.<br />
+          I just want you to smile 🌻
         </p>
 
       {/* 🌙 POEM STANZA (BOTTOM) */}

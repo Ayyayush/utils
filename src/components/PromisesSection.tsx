@@ -45,17 +45,30 @@ export default function PromisesSection() {
 
       <div className="relative z-10 max-w-6xl mx-auto">
 
-        {/* Header */}
+           {/* Header */}
         <div className="text-center mb-16 sm:mb-20 md:mb-24">
-          <p className="text-xs sm:text-sm uppercase tracking-widest text-rose-500 mb-3">
-            My Commitment
+          <p className="text-sm sm:text-base text-rose-500 mb-3 font-cormorant italic">
+            what I'll try to do
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair text-rose-900 mb-5 sm:mb-6 px-4 text-shadow-soft">
             I Promise…
           </h2>
           <p className="text-xl sm:text-2xl font-cormorant italic text-rose-700 max-w-3xl mx-auto px-4 leading-relaxed">
-            Not perfection — just effort, honesty,<br className="sm:hidden" />
-            and a heart that chooses you every day.
+            Not perfection.<br />
+            Just effort. Honesty.<br />
+            And choosing you — every day.
+          </p>
+        </div>
+
+           {/* Raw, Vulnerable Text Block - Breaking the Grid */}
+        <div className="text-center max-w-xl mx-auto mb-20 sm:mb-24 px-6">
+          <p className="text-base sm:text-lg font-cormorant text-rose-700 leading-relaxed" style={{ lineHeight: '1.8' }}>
+            I'll mess up sometimes.<br />
+            I'll forget. I'll fall short.<br />
+            But I won't stop trying.<br />
+            <br />
+            I don't want to keep apologizing for the same things.<br />
+            I want to actually change them.
           </p>
         </div>
 
