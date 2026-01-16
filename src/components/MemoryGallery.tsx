@@ -16,6 +16,7 @@ const memories = [
     caption: "You, glowing in your own world",
     image: ourimg4,
     size: "md:col-span-1",
+   position: "object-[10%_10%]",
   },
   {
     caption: "The kind of joy I fell for",
