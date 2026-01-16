@@ -3,13 +3,12 @@ import scn2 from "../assets/scn2.png";
 import scn3 from "../assets/scn3.png";
 
 const promises = [
-  "I'll listen — really listen, not just hear.",
-  "Less anger, more patience, always more love.",
-  "I'll never let you feel alone, even in silence.",
-  "I'll choose calm over ego, every single time.",
-  "I'll protect your peace like it's my own.",
+  "I'll try to listen — really listen, not just hear.",
+  "I'll work on my anger. More patience. More calm.",
+  "I won't let you feel alone, even in silence.",
+  "I'll choose peace over ego. Even when it's hard.",
+  "I'll protect your heart the way you've protected mine.",
   "I'll grow, even when it's uncomfortable.",
-  "And yes… even if you cut my hair wrong again, I won't complain",
 ];
 
 export default function PromisesSection() {
@@ -20,21 +19,21 @@ export default function PromisesSection() {
       <div className="section-glow-rose top-10 left-10" />
       <div className="section-glow-pink bottom-10 right-10" />
 
-      {/* Floating Hearts and Flowers */}
+      {/* Floating Hearts and Flowers - Minimal and calm */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {Array.from({ length: 24 }).map((_, i) => {
+        {Array.from({ length: 10 }).map((_, i) => {
           const elements = ['🌸', '🌺', '💕', '💗', '🌷', '🌻', '🌼'];
           const element = elements[i % elements.length];
           return (
             <span
               key={i}
-              className="absolute opacity-50 floating-element"
+              className="absolute opacity-25 floating-element"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                fontSize: `${16 + Math.random() * 20}px`,
-                animationDelay: `${Math.random() * 8}s`,
-                animationDuration: `${15 + Math.random() * 10}s`,
+                fontSize: `${14 + Math.random() * 14}px`,
+                animationDelay: `${Math.random() * 12}s`,
+                animationDuration: `${20 + Math.random() * 15}s`,
               }}
             >
               {element}
@@ -47,15 +46,28 @@ export default function PromisesSection() {
 
         {/* Header */}
         <div className="text-center mb-16 sm:mb-20 md:mb-24">
-          <p className="text-xs sm:text-sm uppercase tracking-widest text-rose-500 mb-3">
-            My Commitment
+          <p className="text-sm sm:text-base text-rose-500 mb-3 font-cormorant italic">
+            what I'll try to do
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair text-rose-900 mb-5 sm:mb-6 px-4 text-shadow-soft">
             I Promise…
           </h2>
           <p className="text-xl sm:text-2xl font-cormorant italic text-rose-700 max-w-3xl mx-auto px-4 leading-relaxed">
-            Not perfection — just effort, honesty,<br className="sm:hidden" />
-            and a heart that chooses you every day.
+            Not perfection.<br />
+            Just effort. Honesty.<br />
+            And choosing you — every day.
+          </p>
+        </div>
+
+        {/* Raw, Vulnerable Text Block - Breaking the Grid */}
+        <div className="text-center max-w-xl mx-auto mb-20 sm:mb-24 px-6">
+          <p className="text-base sm:text-lg font-cormorant text-rose-700 leading-relaxed" style={{ lineHeight: '1.8' }}>
+            I'll mess up sometimes.<br />
+            I'll forget. I'll fall short.<br />
+            But I won't stop trying.<br />
+            <br />
+            I don't want to keep apologizing for the same things.<br />
+            I want to actually change them.
           </p>
         </div>
 
@@ -135,9 +147,8 @@ export default function PromisesSection() {
         {/* Closing Line */}
         <div className="text-center mt-20 sm:mt-24 md:mt-28">
           <p className="text-2xl sm:text-3xl md:text-4xl font-cormorant italic text-rose-900 max-w-4xl mx-auto leading-relaxed px-4">
-            I may stumble…<br className="sm:hidden" />
-            but I promise I'll never stop trying —<br />
-            for you, for us 💗.
+            I'll stumble.<br />
+            But I won't stop choosing you with honesty.
           </p>
         </div>
 

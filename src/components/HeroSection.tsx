@@ -23,21 +23,21 @@ export default function HeroSection() {
       {/* 🌫 Soft romantic overlay */}
       <div className="absolute inset-0 bg-gradient-to-b from-white/70 via-rose-50/70 to-pink-100/80 backdrop-blur-[2px]" />
 
-      {/* Floating Hearts and Flowers */}
+      {/* Floating Hearts and Flowers - Reduced for subtlety */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {Array.from({ length: 24 }).map((_, i) => {
+        {Array.from({ length: 12 }).map((_, i) => {
           const elements = ['🌸', '🌺', '💕', '💗', '🌷'];
           const element = elements[i % elements.length];
           return (
             <span
               key={i}
-              className="absolute opacity-50 floating-element"
+              className="absolute opacity-30 floating-element"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                fontSize: `${16 + Math.random() * 20}px`,
-                animationDelay: `${Math.random() * 8}s`,
-                animationDuration: `${15 + Math.random() * 10}s`,
+                fontSize: `${14 + Math.random() * 16}px`,
+                animationDelay: `${Math.random() * 12}s`,
+                animationDuration: `${20 + Math.random() * 15}s`,
               }}
             >
               {element}
@@ -64,13 +64,10 @@ export default function HeroSection() {
 
         {/* Sub Text */}
         <p className="text-base sm:text-lg md:text-xl text-rose-700 font-cormorant italic mb-8 sm:mb-10 leading-relaxed max-w-2xl mx-auto px-4">
-          I know I messed up.<br className="sm:hidden" />
-          This isn't an excuse…<br className="sm:hidden" />
-          just something from my heart. <br className="sm:hidden" />
-          Any word here  is not for the sake of having it...It is my prommise to you<br className="sm:hidden" />
-          <br/>
-          It is just an effort to make you smile
-
+          I know I messed up.<br />
+          This isn't an excuse… just something from my heart.<br />
+          Every word here is real.<br />
+          It's just an effort to make you smile.
         </p>
 
         {/* Image Card */}
@@ -97,8 +94,8 @@ export default function HeroSection() {
 
         {/* Bottom Line */}
        <p className="mt-10 sm:mt-12 text-rose-800 text-base sm:text-lg italic font-cormorant max-w-xl mx-auto px-4 leading-relaxed">
-  "I am not Perfect…  
-  I just want you to know that i will try to be a better person for you with each day moving forward "
+  I'm not perfect.<br />
+  I just want to try — with honesty, every day.
 </p>
 
       </div>

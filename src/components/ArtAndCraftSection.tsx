@@ -3,14 +3,12 @@ import art2 from "../assets/art2.jpeg";
 import art3 from "../assets/art3.jpeg";
 
 const reflectionCards = [
-  { title: "My Blunder", text: "I admit I hurt you. I should have been more careful with your heart." },
-  { title: "Your Pain", text: "I see the pain I caused — and I truly regret it." },
-  { title: "Reflection", text: "I've thought deeply about my actions and their impact on you." },
-  { title: "Learning", text: "This taught me that love needs patience and presence." },
-  { title: "Your Worth", text: "You deserve effort, softness, and consistency — always." },
-  { title: "Commitment", text: "I'm committed to being better, not just saying sorry." },
-  { title: "Forgiveness", text: "I ask for a chance to show my love through actions." },
-  { title: "Us", text: "I still believe in us — healing, growing, choosing each other again." },
+  { title: "My Blunder", text: "I hurt you. I should have been more careful with your heart." },
+  { title: "Your Pain", text: "I see the pain I caused. I truly regret it." },
+  { title: "Reflection", text: "I've thought about what I did — and who I want to be for you." },
+  { title: "Learning", text: "Love needs patience. And presence. I'm learning that." },
+  { title: "Your Worth", text: "You deserve effort, softness, and honesty — always." },
+  { title: "Growth", text: "I want to be better. Not just say it — actually be it." },
 ];
 
 export default function ArtAndCraftSection() {
@@ -21,21 +19,21 @@ export default function ArtAndCraftSection() {
       <div className="section-glow-pink top-10 left-10" />
       <div className="section-glow-rose bottom-10 right-10" />
 
-     {/* Floating Hearts and Flowers */}
+     {/* Floating Hearts and Flowers - Gentle */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {Array.from({ length: 24 }).map((_, i) => {
-          const elements = ['🌸', '🌺', '💕', '💗', '🌷',"🌻", "🌼","🌻"];
+        {Array.from({ length: 10 }).map((_, i) => {
+          const elements = ['🌸', '🌺', '💕', '💗', '🌷',"🌻", "🌼"];
           const element = elements[i % elements.length];
           return (
             <span
               key={i}
-              className="absolute opacity-50 floating-element"
+              className="absolute opacity-25 floating-element"
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                fontSize: `${16 + Math.random() * 20}px`,
-                animationDelay: `${Math.random() * 8}s`,
-                animationDuration: `${15 + Math.random() * 10}s`,
+                fontSize: `${14 + Math.random() * 14}px`,
+                animationDelay: `${Math.random() * 12}s`,
+                animationDuration: `${20 + Math.random() * 15}s`,
               }}
             >
               {element}
@@ -48,15 +46,15 @@ export default function ArtAndCraftSection() {
 
         {/* Header */}
         <div className="text-center mb-16 sm:mb-20 md:mb-24">
-          <p className="text-xs sm:text-sm uppercase tracking-widest text-rose-500 mb-3">
-            Honest Reflections
+          <p className="text-sm sm:text-base text-rose-500 mb-3 font-cormorant italic">
+            honest reflections
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-playfair text-rose-900 mb-5 sm:mb-6 px-4 text-shadow-soft">
             From My Heart
           </h2>
           <p className="text-xl sm:text-2xl font-cormorant italic text-rose-700 max-w-3xl mx-auto px-4 leading-relaxed">
-            These aren't excuses…<br className="sm:hidden" />
-            they're the thoughts that keep floating back to you.
+            These aren't excuses.<br />
+            Just thoughts that keep floating back to you.
           </p>
         </div>
 
@@ -137,9 +135,9 @@ export default function ArtAndCraftSection() {
         {/* Closing Line */}
         <div className="text-center mt-20 sm:mt-24 md:mt-28">
           <p className="text-2xl sm:text-3xl md:text-4xl font-cormorant italic text-rose-900 max-w-4xl mx-auto leading-relaxed px-4">
-            I may not be perfect…<br className="sm:hidden" />
-            but every feeling here is real.<br />
-            And you — you are still my safest place.
+            I'm not perfect.<br />
+            But every feeling here is real.<br />
+            And you are still my safest place.
           </p>
         </div>
 

@@ -8,33 +8,33 @@ import promise from "../assets/promise.jpeg";
 const STORY_TABS = [
   {
     key: "mistake",
-    label: "My Mistake",
-    title: "My Mistake",
-    text: "I messed up, and I'm truly sorry for the pain I've caused you. I really am..",
+    label: "Where I Went Wrong",
+    title: "Where I Went Wrong",
+    text: "I messed up. I see that now. I'm sorry for the pain I caused you.",
     img: mistakes,
     position: "center 20%",
   },
   {
     key: "feelings",
-    label: "Your Feelings",
-    title: "Your Feelings",
-    text: "I understand that you're hurt, and your feelings are completely valid.",
+    label: "How You Felt",
+    title: "How You Felt",
+    text: "You're hurt. And I know that's because of me. Your feelings matter.",
     img: feelings,
     position: "center 40%",
   },
   {
     key: "promise",
-    label: "My Promise",
-    title: "My Promise",
-    text: "I promise to listen better, grow, and never take you for granted again.",
+    label: "What I Promise You",
+    title: "What I Promise You",
+    text: "I'll try to listen more. To be present. I won't promise perfection — just honest effort.",
     img: promise,
     position: "center 20%",
   },
   {
     key: "future",
-    label: "Our Future",
-    title: "Our Future",
-    text: "I hope we can heal, rebuild, and choose each other again — every day.",
+    label: "If We Try Again",
+    title: "If We Try Again",
+    text: "Maybe we can heal. Learn. Choose each other with honesty — one day at a time.",
     img: future,
     position: "center 60%",
   },
@@ -50,9 +50,9 @@ export default function ApologySection() {
       <div className="section-glow-rose top-20 left-10" />
       <div className="section-glow-pink bottom-0 right-0" />
 
-      {/* Floating Elements */}
+      {/* Floating Elements - Subtle and minimal */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {Array.from({ length: 12 }).map((_, i) => {
+        {Array.from({ length: 8 }).map((_, i) => {
           const elements = ['🌻','💕', '🌸', '🌺', '💗','🌻'];
           const element = elements[i % elements.length];
           return (
@@ -62,8 +62,9 @@ export default function ApologySection() {
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                fontSize: `${18 + Math.random() * 14}px`,
-                animationDelay: `${Math.random() * 8}s`,
+                fontSize: `${16 + Math.random() * 12}px`,
+                animationDelay: `${Math.random() * 12}s`,
+                opacity: 0.3,
               }}
             >
               {element}
@@ -76,14 +77,15 @@ export default function ApologySection() {
 
         {/* Header */}
         <div className="text-center">
-          <p className="text-xs sm:text-sm uppercase tracking-widest text-rose-500 mb-3">
-            This part was hard to write…
+          <p className="text-sm sm:text-base text-rose-500 mb-3 font-cormorant italic">
+            this part was hard to write…
           </p>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-playfair text-rose-900 mb-4 sm:mb-5 px-4 text-shadow-soft">
-            A Sincere Sorry
+            I'm Sorry
           </h2>
           <p className="text-base sm:text-lg text-rose-700 max-w-2xl mx-auto px-4 leading-relaxed">
-            I'm not proud of what happened, but I am committed to making amends.
+            I don't know if these words fix anything.<br />
+            I just didn't want to stay silent anymore.
           </p>
         </div>
 
@@ -93,8 +95,8 @@ export default function ApologySection() {
        
           {/* Text */}
           <div className="glass-card-strong p-8 sm:p-10 order-1 md:order-2">
-            <p className="text-xs uppercase tracking-widest text-rose-400 mb-3">
-              From My Heart
+            <p className="text-sm text-rose-400 mb-3 font-cormorant italic">
+              from my heart
             </p>
 
          <h3 className="text-3xl sm:text-4xl font-playfair text-rose-900 mb-6">
@@ -138,13 +140,13 @@ export default function ApologySection() {
         {/* Story Tabs Section */}
         <div className="pt-8 sm:pt-12">
 
-          {/* Tabs */}
+          {/* Tabs - Soft, letter-like chapters */}
           <div className="flex justify-center gap-3 sm:gap-4 mb-12 sm:mb-16 flex-wrap px-4">
             {STORY_TABS.map((tab) => (
               <button
                 key={tab.key}
                 onClick={() => setActiveStory(tab)}
-                className={`px-5 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm font-medium transition-all ${
+                className={`px-5 sm:px-6 py-2 sm:py-2.5 rounded-full text-sm font-medium tab-glow ${
                   activeStory.key === tab.key
                     ? "bg-gradient-to-r from-rose-500 to-pink-500 text-white shadow-lg scale-105"
                     : "glass-card text-rose-700 hover:scale-105"

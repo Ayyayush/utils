@@ -18,9 +18,9 @@ export default function FinalMessageSection() {
       <div className="section-glow-pink top-20 left-20" />
       <div className="section-glow-rose bottom-20 right-20" />
 
-      {/* Floating Elements */}
+      {/* Floating Elements - Gentle and sparse */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {Array.from({ length: 20 }).map((_, i) => {
+        {Array.from({ length: 10 }).map((_, i) => {
           const elements = ["💕", "💗", "🌸", "🌺", "✨"];
           const element = elements[i % elements.length];
           return (
@@ -30,8 +30,9 @@ export default function FinalMessageSection() {
               style={{
                 left: `${Math.random() * 100}%`,
                 top: `${Math.random() * 100}%`,
-                fontSize: `${18 + Math.random() * 16}px`,
-                animationDelay: `${Math.random() * 8}s`,
+                fontSize: `${14 + Math.random() * 12}px`,
+                animationDelay: `${Math.random() * 12}s`,
+                opacity: 0.25,
               }}
             >
               {element}
@@ -46,8 +47,8 @@ export default function FinalMessageSection() {
         {/* Main Message Card */}
         <div className="glass-card-strong p-8 sm:p-12 md:p-16 mb-10">
 
-          <p className="text-xs sm:text-sm uppercase tracking-widest text-rose-500 mb-4">
-            From My Heart To Yours
+          <p className="text-sm sm:text-base text-rose-500 mb-4 font-cormorant italic">
+            from my heart to yours
           </p>
 
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-playfair text-rose-900 mb-6 sm:mb-8 text-shadow-soft">
@@ -61,10 +62,10 @@ Main khud mein poora nahi hoon…<br />
 par jo bhi yahan hai, wo sirf tumhare liye hai.
           </p>
 
-          {/* Buttons */}
+          {/* Buttons - No Pressure */}
           <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 justify-center items-center mb-8">
             <button className="w-full sm:w-auto px-8 py-3.5 rounded-full glass-card text-rose-700 font-semibold hover:scale-105 transition-all">
-              Take me Back when you're ready 🌻
+              I'll be here 🌻
             </button>
 
             <button className="w-full sm:w-auto px-8 py-3.5 rounded-full bg-gradient-to-r from-rose-500 to-pink-500 text-white font-semibold shadow-xl hover:scale-105 hover:shadow-2xl transition-all flex items-center justify-center gap-2">
@@ -86,18 +87,30 @@ par jo bhi yahan hai, wo sirf tumhare liye hai.
           </p>
         </div>
 
+        {/* Quiet, Raw Line - No Card, High Emotional Weight */}
+        <div className="max-w-xl mx-auto mb-16 sm:mb-20">
+          <p className="text-sm sm:text-base text-rose-600 font-cormorant italic leading-relaxed text-center px-4">
+            I don't know what happens next.<br />
+            I just know I didn't want to stay silent.<br />
+            <br />
+            No rush. No expectations.<br />
+            Just honesty.
+          </p>
+        </div>
+
         {/* Final Closing Line */}
         <p className="text-base sm:text-lg text-rose-600 italic font-cormorant mb-12">
-          This isn't just an apology — it's my truth, my feelings, and my hope for us.
-          I just want you to smile if you liked it 🌻
+          This isn't just an apology.<br />
+          It's my truth, my heart, and my hope.<br />
+          I just want you to smile 🌻
         </p>
 
       {/* 🌙 POEM STANZA (BOTTOM) */}
 <p
   className="text-center font-cormorant italic leading-relaxed"
   style={{
-    color: "#d49a2a",                          // 🌻 soft warm yellow
-    fontSize: "clamp(15px, 4vw, 21px)",        // mobile responsive
+    color: "#d49a2a",
+    fontSize: "clamp(15px, 4vw, 21px)",
     textShadow: "0 2px 8px rgba(212,154,42,0.45)",
   }}
 >
