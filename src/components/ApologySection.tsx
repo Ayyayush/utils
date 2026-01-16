@@ -3,6 +3,7 @@ import apology from "../assets/apology.jpeg";
 import feelings from "../assets/feelings.jpeg";
 import mistakes from "../assets/mistakes.jpeg";
 import future from "../assets/future.jpeg";
+import promise from "../assets/promise.jpeg";
 
 const STORY_TABS = [
   {
@@ -26,8 +27,8 @@ const STORY_TABS = [
     label: "My Promise",
     title: "My Promise",
     text: "I promise to listen better, grow, and never take you for granted again.",
-    img: "https://proxy.electricblaze.com/?u=https%3A%2F%2Fimages.unsplash.com%2Fphoto-1660918262717-b08af8df4d82%3Fixid%3DM3w0Mzc5fDB8MXxzZWFyY2h8MjN8fGZsb3dlcnMlMkMlMjBoZWFydCUyQyUyMGxldHRlcnxlbnwwfDB8fHwxNzY1MzcyNTE3fDA%26ixlib%3Drb-4.1.0%26auto%3Dformat%26fit%3Dcrop%26w%3D1200%26q%3D50&e=1770336000&s=8HTNXqliF4lyvPhlSp9qOj3YeDrdyRnxkqSh3cX7iOE",
-    position: "center center",
+    img: promise,
+    position: "center 20%",
   },
   {
     key: "future",
